@@ -1,0 +1,38 @@
+<div class="dialog-form">
+  <h1 mat-dialog-title>
+    {{ formData.action | titlecase }} {{ formData.type | titlecase }}
+  </h1>
+  <app-form
+    *ngIf="formData.action != 'Delete'; else elseTemplate"
+    mat-dialog-content
+    [parentForm]="dialogForm"
+    [fieldData]="formFieldData"
+    [submitted]="submitted"
+  >
+  </app-form>
+  <ng-template #elseTemplate>
+    Sure to delete
+    <b>{{ formData.value[title] }}</b
+    >?
+  </ng-template>
+  <ng-container>
+    <div mat-dialog-actions class="button-wrapper">
+      <button
+        mat-raised-button
+        type="button"
+        class="button"
+        (click)="doAction()"
+      >
+        {{ formData.action | titlecase }}
+      </button>
+      <button
+        mat-raised-button
+        type="button"
+        (click)="closeDialog()"
+        color="warn"
+      >
+        Cancel
+      </button>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,23 @@
+/*-----------------------------Button-------------------*/
+
+#back-to-top-button {
+  display: none;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  bottom: 40px;
+  right: 45px;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background-color: black;
+  opacity: 0.5;
+  font-size: 22px;
+  color: white;
+  line-height: 1em;
+  padding: 0;
+}
+
+#back-to-top-button:hover {
+  background-color: #555;
+}

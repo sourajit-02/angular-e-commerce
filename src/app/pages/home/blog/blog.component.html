@@ -1,0 +1,35 @@
+<section class="blog-wrapper">
+  <div class="container">
+    <div class="title">
+      <h3 class="text1">Our Blog</h3>
+    </div>
+    <div class="row">
+      <div class="col" *ngFor="let item of list">
+        <!-- blog -->
+        <div class="blog">
+          <a href="/" class="image-wrapper">
+            <img [src]="item.image" alt="blog-img" class="blog-img" />
+          </a>
+          <div class="blog-content">
+            <h4 class="blog-title">
+              <a href="/" class="text2">
+                {{ item.title }}
+              </a>
+            </h4>
+            <span class="text3">{{ item.info.text1 }}&nbsp;</span>
+            <span class="text4">{{ item.info.text2 }}&nbsp;</span>
+            <span class="text3">{{ item.info.text3 }}&nbsp;</span>
+            <span class="text4">
+              <time datetime="Thursday, December 28, 2017 at 2:09 pm -0500">
+                Dec 28,2017
+              </time>
+            </span>
+            <p class="text5">
+              {{ item.content }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

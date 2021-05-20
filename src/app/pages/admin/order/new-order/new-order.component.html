@@ -1,0 +1,13 @@
+<div class="order-wrapper">
+  <div class="header-wrapper">
+    <h5>{{ title }}</h5>
+    <button mat-flat-button (click)="openDialog('Add', {})" class="button">
+      Add Order
+    </button>
+  </div>
+  <app-prime-table
+    [dataSource]="dataSource"
+    [displayedColumns]="displayedColumns"
+  >
+  </app-prime-table>
+</div>

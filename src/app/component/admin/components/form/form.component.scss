@@ -1,0 +1,23 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+@media (min-width: 860px) {
+  app-form-field {
+    flex: 0 0 360px;
+  }
+}
+
+@media (min-width: 1080px) {
+  app-form-field {
+    flex: 0 0 460px;
+  }
+}
+
+@media (min-width: 1460px) {
+  app-form-field {
+    flex: 0 0 560px;
+  }
+}

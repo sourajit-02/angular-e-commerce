@@ -1,0 +1,14 @@
+<div class="country-wrapper">
+  <div class="header-wrapper">
+    <h5>Country</h5>
+    <button mat-flat-button (click)="openDialog('Add', {})" class="button">
+      Add Country
+    </button>
+  </div>
+  <app-prime-table
+    [dataSource]="dataSource"
+    [displayedColumns]="displayedColumns"
+    [displayItem]="Item"
+  >
+  </app-prime-table>
+</div>

@@ -1,0 +1,13 @@
+<h1>FEATURED PRODUCTS</h1>
+<div class="slider-wrapper">
+  <div class="slider">
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let product of productList">
+        <app-product-item
+          [productItem]="product"
+          [authUser]="authUser"
+        ></app-product-item>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</div>

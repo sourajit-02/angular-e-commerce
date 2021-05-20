@@ -1,0 +1,32 @@
+.block-header__breadcrumb {
+  padding-top: 16px;
+  padding-bottom: 40px;
+}
+
+.breadcrumb__list {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: -4px 0 0;
+  width: 100%;
+}
+
+.breadcrumb__spaceship-safe-area {
+  display: none;
+  height: 21px;
+  width: calc(50% + 480px / 2 + 20px);
+  margin-top: 4px;
+}
+
+.breadcrumb__spaceship-safe-area {
+  float: right;
+}
+
+.breadcrumb__item {
+  margin-top: 4px;
+}
+
+.breadcrumb__item {
+  margin-right: -7.12435px;
+  float: left;
+}

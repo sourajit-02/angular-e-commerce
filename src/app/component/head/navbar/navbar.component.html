@@ -1,0 +1,223 @@
+<mat-sidenav-container>
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    [ngClass]="{ hidden: (isWeb$ | async) }"
+    fixedInViewport="false"
+    position="start"
+    [attr.role]="!(isWeb$ | async) ? 'navigation' : 'directory'"
+    [mode]="!(isWeb$ | async) ? 'push' : 'over'"
+  >
+    <mat-toolbar id="sidenav-toggle">
+      <button
+        class="hamburger"
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        [ngClass]="{ hidden: (isWeb$ | async) }"
+      >
+        <mat-icon class="highlight-off" aria-label="Side nav toggle icon"
+          >highlight_off</mat-icon
+        >
+      </button>
+      <span> Menu </span>
+    </mat-toolbar>
+
+    <mat-divider></mat-divider>
+
+    <div>
+      <mat-nav-list class="side-menu">
+        <span mat-list-item class="text1 list-item">
+          Free shipping for standard order over $100
+        </span>
+
+        <mat-divider></mat-divider>
+
+        <span mat-list-item class="text1 email list-item"
+          >fashe@example.com</span
+        >
+
+        <mat-divider></mat-divider>
+
+        <div mat-list-item class="social list-item">
+          <a href="https://facebook.com/shopify">
+            <fa-icon [icon]="faFacebookF"></fa-icon>
+          </a>
+          <a href="https://twitter.com/shopify">
+            <fa-icon [icon]="faTwitter"></fa-icon>
+          </a>
+          <a href="https://pinterest.com/shopify"
+            ><fa-icon [icon]="faPinterestSquare"></fa-icon
+          ></a>
+          <a href="https://plus.google.com/shopify"
+            ><fa-icon [icon]="faGooglePlusG"></fa-icon
+          ></a>
+          <a href="https://instagram.com/shopify"
+            ><fa-icon [icon]="faInstagram"></fa-icon
+          ></a>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <ng-container *ngFor="let link of links" mat-list-item>
+          <div class="button-wrapper list-item">
+            <ng-container *ngIf="!link.layer">
+              <button
+                mat-button
+                class="layer1 hamburger-menu-item"
+                routerLink="{{ link.url }}"
+                [routerLinkActiveOptions]="{ exact: true }"
+              >
+                {{ link.name }}
+              </button>
+            </ng-container>
+            <ng-container *ngIf="link.layer">
+              <button
+                class="layer1 hamburger-menu-item"
+                mat-button
+                [matMenuTriggerFor]="layer2"
+                routerLink="{{ link.url }}"
+                [routerLinkActiveOptions]="{ exact: true }"
+              >
+                {{ link.name }}
+              </button>
+              <mat-icon class="right"> keyboard_arrow_right </mat-icon>
+              <mat-menu #layer2="matMenu">
+                <ng-container *ngFor="let layer2 of link.layer">
+                  <ng-container *ngIf="!layer2.layer">
+                    <button
+                      mat-menu-item
+                      routerLink="{{ layer2.url }}"
+                      [routerLinkActiveOptions]="{ exact: true }"
+                    >
+                      {{ layer2.name }}
+                    </button>
+                  </ng-container>
+                  <ng-container *ngIf="layer2.layer">
+                    <button
+                      mat-menu-item
+                      [matMenuTriggerFor]="layer3"
+                      routerLink="{{ link.url }}"
+                      [routerLinkActiveOptions]="{ exact: true }"
+                    >
+                      {{ layer2.name }}
+                    </button>
+                    <mat-menu #layer3="matMenu">
+                      <ng-container *ngFor="let layer3 of layer2.layer">
+                        <button
+                          mat-menu-item
+                          routerLink="{{ layer3.url }}"
+                          [routerLinkActiveOptions]="{ exact: true }"
+                        >
+                          {{ layer3.name }}
+                        </button>
+                      </ng-container>
+                    </mat-menu>
+                  </ng-container>
+                </ng-container>
+              </mat-menu>
+            </ng-container>
+          </div>
+        </ng-container>
+      </mat-nav-list>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="nav-content">
+      <app-topbar class="topbar"></app-topbar>
+      <mat-toolbar class="main-toolbar">
+        <div class="logo-wrapper">
+          <a routerLink="./" class="logo">
+            <img src="{{ logoUrl }}" alt="logo" />
+          </a>
+        </div>
+        <div class="menu-wrapper">
+          <button
+            class="hamburger"
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()"
+            *ngIf="!(isWeb$ | async)"
+          >
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+          <div class="main-menu">
+            <mat-nav-list #layer1 class="menu" *ngIf="isWeb$ | async">
+              <ng-container *ngFor="let link of links" mat-list-item>
+                <ng-container *ngIf="!link.layer">
+                  <button
+                    mat-button
+                    class="layer1"
+                    routerLinkActive="current"
+                    routerLink="{{ link.url }}"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                  >
+                    {{ link.name }}
+                  </button>
+                </ng-container>
+                <ng-container *ngIf="link.layer">
+                  <button
+                    class="layer1"
+                    mat-button
+                    routerLinkActive="current"
+                    [matMenuTriggerFor]="layer2"
+                    routerLink="{{ link.url }}"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                  >
+                    {{ link.name }}
+                    <mat-icon class="expand"> expand_more </mat-icon>
+                  </button>
+                  <mat-menu #layer2="matMenu">
+                    <ng-container *ngFor="let layer2 of link.layer">
+                      <ng-container *ngIf="!layer2.layer">
+                        <button
+                          mat-menu-item
+                          routerLink="{{ layer2.url }}"
+                          [routerLinkActiveOptions]="{ exact: true }"
+                        >
+                          {{ layer2.name }}
+                        </button>
+                      </ng-container>
+                      <ng-container *ngIf="layer2.layer">
+                        <button
+                          mat-menu-item
+                          [matMenuTriggerFor]="layer3"
+                          routerLink="{{ link.url }}"
+                          [routerLinkActiveOptions]="{ exact: true }"
+                        >
+                          {{ layer2.name }}
+                        </button>
+                        <mat-menu #layer3="matMenu">
+                          <ng-container *ngFor="let layer3 of layer2.layer">
+                            <button
+                              mat-menu-item
+                              routerLink="{{ layer3.url }}"
+                              [routerLinkActiveOptions]="{ exact: true }"
+                            >
+                              {{ layer3.name }}
+                            </button>
+                          </ng-container>
+                        </mat-menu>
+                      </ng-container>
+                    </ng-container>
+                  </mat-menu>
+                </ng-container>
+              </ng-container>
+            </mat-nav-list>
+          </div>
+
+          <div class="header-end">
+            <app-account-model></app-account-model>
+
+            <span class="linedivide"></span>
+
+            <app-add-to-cart></app-add-to-cart>
+          </div>
+        </div>
+      </mat-toolbar>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

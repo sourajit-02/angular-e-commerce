@@ -1,0 +1,13 @@
+<div class="brand-wrapper">
+  <div class="header-wrapper">
+    <h5>Brand</h5>
+    <button mat-flat-button (click)="openDialog('Add', {})" class="button">
+      Add Brand
+    </button>
+  </div>
+  <app-prime-table
+    [dataSource]="dataSource"
+    [displayedColumns]="displayedColumns"
+  >
+  </app-prime-table>
+</div>

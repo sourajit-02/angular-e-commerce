@@ -1,0 +1,25 @@
+<div class="product">
+  <div class="product-img-wrapper">
+    <img
+      mat-card-image
+      class="product-img"
+      src="../../../../assets/item/item-08.jpg"
+      alt="product-item"
+    />
+    <div class="button-wrapper">
+      <button class="button" mat-flat-button (click)="handleAddToCart()">
+        Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+<div class="product-info">
+  <a
+    class="product-text"
+    (click)="routeToProductDetails(productItem.product_id)"
+    routerLinkActive="current"
+  >
+    {{ productItem.product_name }}
+  </a>
+  <div>{{ productItem.product_price | currency: "USD" }}</div>
+</div>

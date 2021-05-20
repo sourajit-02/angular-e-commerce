@@ -1,0 +1,37 @@
+<div class="admin-form-field">
+  <ng-container>
+    <mat-form-field appearance="outline">
+      <mat-label>
+        {{ formFieldData.label }}
+      </mat-label>
+      <mat-select
+        [(value)]="formFieldData.values[0].value"
+        [formControl]="control"
+      >
+      <ng-container *ngFor="let value of formFieldData.values ">
+        <mat-option [value]="value.value">
+          {{ value.name }}
+        </mat-option>
+          <span *ngIf=" value.children?.length > 0">
+            <ng-container *ngFor="let value2 of value.children ">
+              <mat-option [value]="value2.value">
+                ---{{value2.name}}
+              </mat-option>
+
+              <span *ngIf="value2.children?.length > 0">
+                <ng-container *ngFor="let value3 of value2.children ">
+                  <mat-option [value]="value3.value">
+                    -----{{value3.name}}
+                  </mat-option>
+                </ng-container>
+              </span>
+            </ng-container>
+          </span>
+      </ng-container>
+      </mat-select>
+      <mat-error *ngIf="control.hasError('required') && submitted === true">
+        {{ getError("required") }}
+      </mat-error>
+    </mat-form-field>
+  </ng-container>
+</div>

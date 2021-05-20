@@ -1,0 +1,569 @@
+<mat-card class="card">
+  <div class="form-container">
+    <h1 class="mac-font-family">fashe-theme</h1>
+    <form [formGroup]="userForm" #form="ngForm" class="form">
+      <ng-container *ngFor="let data of userFieldData">
+        <ng-container *ngIf="data.hidden !== true">
+          <ng-container *ngIf="data.fieldType === 'input'">
+            <mat-form-field appearance="outline">
+              <mat-label>{{ data.label }}</mat-label>
+              <input
+                matInput
+                [type]="data.type"
+                [placeholder]="data.placeholder"
+                [formControlName]="data.controller"
+                [min]="data.min"
+                [max]="data.max"
+              />
+              <mat-error
+                *ngIf="
+                  userForm.get(data.controller).hasError('required') &&
+                  form.submitted
+                "
+              >
+                {{ getError("required", data) }}
+              </mat-error>
+              <mat-error
+                *ngIf="
+                  userForm.get(data.controller).hasError('email') &&
+                  form.submitted
+                "
+              >
+                {{ getError("email", data) }}
+              </mat-error>
+              <mat-error
+                *ngIf="
+                  userForm.get(data.controller).hasError('pattern') &&
+                  form.submitted
+                "
+              >
+                {{ getError("pattern", data) }}
+              </mat-error>
+              <mat-error
+                *ngIf="
+                  userForm.get(data.controller).hasError('minlength') &&
+                  form.submitted
+                "
+              >
+                {{ getError("minlength", data) }}
+              </mat-error>
+              <mat-error
+                *ngIf="
+                  userForm.get(data.controller).hasError('maxlength') &&
+                  form.submitted
+                "
+              >
+                {{ getError("maxlength", data) }}
+              </mat-error>
+            </mat-form-field>
+          </ng-container>
+          <ng-container *ngIf="data.fieldType === 'textarea'">
+            <mat-form-field appearance="outline">
+              <mat-label> {{ data.label }} </mat-label>
+              <textarea
+                matInput
+                [placeholder]="data.placeholder"
+                [formControlName]="data.controller"
+              >
+              </textarea>
+              <mat-error
+                *ngIf="
+                  userForm.get(data.controller).hasError('required') &&
+                  form.submitted
+                "
+              >
+                {{ getError("required", data) }}
+              </mat-error>
+              <mat-error
+                *ngIf="
+                  userForm.get(data.controller).hasError('email') &&
+                  form.submitted
+                "
+              >
+                {{ getError("email", data) }}
+              </mat-error>
+              <mat-error
+                *ngIf="
+                  userForm.get(data.controller).hasError('pattern') &&
+                  form.submitted
+                "
+              >
+                {{ getError("pattern", data) }}
+              </mat-error>
+              <mat-error
+                *ngIf="
+                  userForm.get(data.controller).hasError('minlength') &&
+                  form.submitted
+                "
+              >
+                {{ getError("minlength", data) }}
+              </mat-error>
+              <mat-error
+                *ngIf="
+                  userForm.get(data.controller).hasError('maxlength') &&
+                  form.submitted
+                "
+              >
+                {{ getError("maxlength", data) }}
+              </mat-error>
+            </mat-form-field>
+          </ng-container>
+          <ng-container *ngIf="data.fieldType === 'select'">
+            <mat-form-field appearance="outline">
+              <mat-label> {{ data.label }} </mat-label>
+              <mat-select
+                [(value)]="data.values[0].value"
+                [formControlName]="data.controller"
+              >
+                <mat-option
+                  *ngFor="let value of data.values"
+                  [value]="value.value"
+                >
+                  {{ value.name }}
+                </mat-option>
+              </mat-select>
+              <mat-error
+                *ngIf="
+                  userForm.get(data.controller).hasError('required') &&
+                  form.submitted
+                "
+              >
+                {{ getError("required", data) }}
+              </mat-error>
+            </mat-form-field>
+          </ng-container>
+        </ng-container>
+      </ng-container>
+    </form>
+    <form [formGroup]="shippingForm" #form2="ngForm" class="form">
+      <ng-container *ngFor="let data of shippingFieldData">
+        <ng-container *ngIf="data.hidden !== true">
+          <ng-container *ngIf="data.fieldType === 'input'">
+            <mat-form-field appearance="outline">
+              <mat-label>{{ data.label }}</mat-label>
+              <input
+                matInput
+                [type]="data.type"
+                [placeholder]="data.placeholder"
+                [formControlName]="data.controller"
+                [min]="data.min"
+                [max]="data.max"
+              />
+              <mat-error
+                *ngIf="
+                  shippingForm.get(data.controller).hasError('required') &&
+                  form2.submitted
+                "
+              >
+                {{ getError("required", data) }}
+              </mat-error>
+              <mat-error
+                *ngIf="
+                  shippingForm.get(data.controller).hasError('email') &&
+                  form2.submitted
+                "
+              >
+                {{ getError("email", data) }}
+              </mat-error>
+              <mat-error
+                *ngIf="
+                  shippingForm.get(data.controller).hasError('pattern') &&
+                  form2.submitted
+                "
+              >
+                {{ getError("pattern", data) }}
+              </mat-error>
+              <mat-error
+                *ngIf="
+                  shippingForm.get(data.controller).hasError('minlength') &&
+                  form2.submitted
+                "
+              >
+                {{ getError("minlength", data) }}
+              </mat-error>
+              <mat-error
+                *ngIf="
+                  shippingForm.get(data.controller).hasError('maxlength') &&
+                  form2.submitted
+                "
+              >
+                {{ getError("maxlength", data) }}
+              </mat-error>
+            </mat-form-field>
+          </ng-container>
+          <ng-container *ngIf="data.fieldType === 'textarea'">
+            <mat-form-field appearance="outline">
+              <mat-label> {{ data.label }} </mat-label>
+              <textarea
+                matInput
+                [placeholder]="data.placeholder"
+                [formControlName]="data.controller"
+              >
+              </textarea>
+              <mat-error
+                *ngIf="
+                  shippingForm.get(data.controller).hasError('required') &&
+                  form2.submitted
+                "
+              >
+                {{ getError("required", data) }}
+              </mat-error>
+              <mat-error
+                *ngIf="
+                  shippingForm.get(data.controller).hasError('email') &&
+                  form2.submitted
+                "
+              >
+                {{ getError("email", data) }}
+              </mat-error>
+              <mat-error
+                *ngIf="
+                  shippingForm.get(data.controller).hasError('pattern') &&
+                  form2.submitted
+                "
+              >
+                {{ getError("pattern", data) }}
+              </mat-error>
+              <mat-error
+                *ngIf="
+                  shippingForm.get(data.controller).hasError('minlength') &&
+                  form2.submitted
+                "
+              >
+                {{ getError("minlength", data) }}
+              </mat-error>
+              <mat-error
+                *ngIf="
+                  shippingForm.get(data.controller).hasError('maxlength') &&
+                  form2.submitted
+                "
+              >
+                {{ getError("maxlength", data) }}
+              </mat-error>
+            </mat-form-field>
+          </ng-container>
+          <ng-container *ngIf="data.fieldType === 'select'">
+            <mat-form-field appearance="outline">
+              <mat-label> {{ data.label }} </mat-label>
+              <mat-select
+                [(value)]="data.values[0].value"
+                [formControlName]="data.controller"
+              >
+                <mat-option
+                  *ngFor="let value of data.values"
+                  [value]="value.value"
+                >
+                  {{ value.name }}
+                </mat-option>
+              </mat-select>
+              <mat-error
+                *ngIf="
+                  shippingForm.get(data.controller).hasError('required') &&
+                  form2.submitted
+                "
+              >
+                {{ getError("required", data) }}
+              </mat-error>
+            </mat-form-field>
+          </ng-container>
+        </ng-container>
+      </ng-container>
+    </form>
+    <div class="flex-center button-wrapper">
+      <button
+        (click)="onSubmit(userForm, shippingForm)"
+        type="submit"
+        class="continue-button"
+        mat-flat-button
+      >
+        <span class="button-text mac-font-family">Continue to Shipping</span>
+      </button>
+      <button
+        mat-flat-button
+        routerLink="/website/cart/view-cart"
+        class="to-cart-button"
+      >
+        <mat-icon aria-label="Left arrow icon">keyboard_arrow_left</mat-icon>
+        <span class="button-text mac-font-family"> Return to Cart</span>
+      </button>
+    </div>
+  </div>
+</mat-card>
+<!-- <form [formGroup]="billingForm" #form="ngForm" class="form">
+  <div>
+    <h3 class="mac-font-family">Contact information</h3>
+    <span class="mac-font-family" id="login-link">
+      Already have an account?
+      <a class="mac-font-family" routerLink="/website/account/login">
+        Log in
+      </a>
+    </span>
+  </div>
+  <mat-form-field appearance="outline">
+    <mat-label class="mac-font-family"> Email </mat-label>
+    <input
+      type="email"
+      matInput
+      placeholder="Email"
+      formControlName="email"
+    />
+    <mat-error
+      *ngIf="
+        billingForm.get('email').hasError('required') && form.submitted
+      "
+    >
+      {{ getError("email-required") }}
+    </mat-error>
+    <mat-error
+      *ngIf="billingForm.get('email').hasError('email') && form.submitted"
+    >
+      {{ getError("email-invalid") }}
+    </mat-error>
+  </mat-form-field>
+  <mat-checkbox color="primary">
+    <span class="checkbox-text mac-font-family">
+      Keep me up to date on news and exclusive offers
+    </span>
+  </mat-checkbox>
+  <h3 class="mac-font-family">Shipping address</h3>
+  <div class="name-wrapper flex-center">
+    <mat-form-field appearance="outline">
+      <mat-label class="mac-font-family">First Name</mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="First name"
+        formControlName="firstName"
+      />
+      <mat-error
+        *ngIf="
+          billingForm.get('firstName').hasError('required') &&
+          form.submitted
+        "
+      >
+        {{ getError("first-name") }}
+      </mat-error>
+      <mat-error
+        *ngIf="
+          billingForm.get('firstName').hasError('pattern') && form.submitted
+        "
+      >
+        {{ getError("first-name-invalid") }}
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label class="mac-font-family">Last Name</mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="Last name"
+        formControlName="lastName"
+      />
+      <mat-error
+        *ngIf="
+          billingForm.get('lastName').hasError('required') && form.submitted
+        "
+      >
+        {{ getError("last-name") }}
+      </mat-error>
+      <mat-error
+        *ngIf="
+          billingForm.get('lastName').hasError('pattern') && form.submitted
+        "
+      >
+        {{ getError("last-name-invalid") }}
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <mat-form-field appearance="outline">
+    <mat-label class="mac-font-family">Address</mat-label>
+    <input
+      type="text"
+      matInput
+      placeholder="Address"
+      formControlName="address"
+    />
+    <mat-error
+      *ngIf="
+        billingForm.get('address').hasError('required') && form.submitted
+      "
+    >
+      {{ getError("address") }}
+    </mat-error>
+    <mat-error
+      *ngIf="
+        billingForm.get('address').hasError('pattern') && form.submitted
+      "
+    >
+      {{ getError("address-invalid") }}
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label class="mac-font-family">
+      Apartment, suite, etc. (optional)
+    </mat-label>
+    <input
+      type="text"
+      matInput
+      placeholder="Apartment, suite, etc. (optional)"
+      formControlName="address2"
+    />
+    <mat-error
+      *ngIf="
+        billingForm.get('address2').hasError('pattern') && form.submitted
+      "
+    >
+      {{ getError("address2") }}
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label class="mac-font-family">City</mat-label>
+    <input type="text" matInput placeholder="City" formControlName="city" />
+    <mat-error
+      *ngIf="billingForm.get('city').hasError('required') && form.submitted"
+    >
+      {{ getError("city") }}
+    </mat-error>
+    <mat-error
+      *ngIf="billingForm.get('city').hasError('pattern') && form.submitted"
+    >
+      {{ getError("city-invalid") }}
+    </mat-error>
+  </mat-form-field>
+  <div class="country-wrpper flex-center">
+    <mat-form-field appearance="outline">
+      <mat-label class="mac-font-family">Country/Region</mat-label>
+      <mat-select
+        [(value)]="selectedCountry"
+        formControlName="country"
+        name="country"
+      >
+        <mat-option value="pakistan"> Pakistan</mat-option>
+        <mat-option value="india"> India </mat-option>
+        <mat-option value="ukraine"> Ukraine </mat-option>
+        <mat-option value="taiwan"> Taiwan </mat-option>
+        <mat-divider></mat-divider>
+        <mat-option
+          *ngFor="let country of countryList"
+          [value]="country.value"
+        >
+          {{ country.name }}
+        </mat-option>
+      </mat-select>
+      <mat-error
+        *ngIf="
+          billingForm.get('country').hasError('required') && form.submitted
+        "
+      >
+        {{ getError("country") }}
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field
+      *ngIf="selectedCountry === 'india'"
+      appearance="outline"
+    >
+      <mat-label class="mac-font-family">State</mat-label>
+      <mat-select
+        [(value)]="selectedState"
+        formControlName="state"
+        name="state"
+      >
+        <mat-option *ngFor="let state of stateList" [value]="state.value">
+          {{ state.name }}
+        </mat-option>
+      </mat-select>
+      <mat-error
+        *ngIf="
+          billingForm.get('state').hasError('required') && form.submitted
+        "
+      >
+        {{ getError("state") }}
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field
+      [class.hide-element]="
+        selectedCountry != 'pakistan' &&
+        selectedCountry != 'india' &&
+        selectedCountry != 'ukraine' &&
+        selectedCountry != 'taiwan'
+      "
+      appearance="outline"
+    >
+      <mat-label class="mac-font-family">PIN Code</mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="PIN Code"
+        formControlName="zipCode"
+      />
+      <mat-error
+        *ngIf="
+          billingForm.get('zipCode').hasError('required') && form.submitted
+        "
+      >
+        {{ getError("zip-code") }}
+      </mat-error>
+      <mat-error
+        *ngIf="
+          billingForm.get('zipCode').hasError('pattern') && form.submitted
+        "
+      >
+        {{ getError("zip-code-invalid") }}
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <mat-form-field appearance="outline">
+    <mat-label class="mac-font-family">Phone</mat-label>
+    <input
+      type="text"
+      matInput
+      placeholder="Phone"
+      formControlName="phone"
+    />
+    <mat-icon
+      matTooltip="In case we need to contact you about your order"
+      matTooltipPosition="above"
+      aria-label="Help icon displays text on mouse hover"
+      aria-hidden="false"
+      id="help-icon"
+      matSuffix
+    >
+      help
+    </mat-icon>
+    <mat-error
+      *ngIf="
+        billingForm.get('phone').hasError('required') && form.submitted
+      "
+    >
+      {{ getError("phone-required") }}
+    </mat-error>
+    <mat-error
+      *ngIf="billingForm.get('phone').hasError('pattern') && form.submitted"
+    >
+      {{ getError("phone-invalid") }}
+    </mat-error>
+  </mat-form-field>
+  <mat-checkbox color="primary">
+    <span class="checkbox-text mac-font-family">
+      Save this information for next time
+    </span>
+  </mat-checkbox>
+  <div class="flex-center button-wrapper">
+    <button
+      (click)="onSubmit()"
+      type="submit"
+      class="continue-button"
+      mat-flat-button
+    >
+      <span class="button-text mac-font-family">Continue to Shipping</span>
+    </button>
+    <button
+      mat-flat-button
+      routerLink="/website/cart/view-cart"
+      class="to-cart-button"
+    >
+      <mat-icon aria-label="Left arrow icon">keyboard_arrow_left</mat-icon>
+      <span class="button-text mac-font-family"> Return to Cart</span>
+    </button>
+  </div>
+</form> -->

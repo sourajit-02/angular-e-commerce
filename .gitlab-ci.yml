@@ -1,0 +1,18 @@
+image: node:latest
+cache:
+  paths:
+    - node_modules/
+image: node:12.13.0-alpine
+before_script:
+  - npm i -g firebase-tools
+  - npm i -g @angular/cli
+master_stage:
+  stage: deploy
+  
+  script:
+    - npm install
+    - npm run build
+    - firebase deploy --token $FIREBASE_TOKEN
+  only:
+    refs:
+      - master

@@ -1,0 +1,15 @@
+<div class="category-wrapper">
+  <div class="header-wrapper">
+    <h5>Category</h5>
+    <button mat-flat-button (click)="openDialog('Add', {})" class="button">
+      Add Category
+    </button>
+  </div>
+  <app-prime-table
+    [dataSource]="dataSource"
+    [displayedColumns]="displayedColumns"
+    (action)="emitRowAction($event)"
+    [displayItem]="Item"
+  >
+  </app-prime-table>
+</div>

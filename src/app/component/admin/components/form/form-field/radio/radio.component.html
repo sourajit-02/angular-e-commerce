@@ -1,0 +1,13 @@
+<ng-container>
+  <mat-label>{{ formFieldData.label }} </mat-label>
+  <mat-radio-group [formControl]="control">
+    <ng-container *ngFor="let data of formFieldData.value">
+      <mat-radio-button [value]="data">
+        {{ data | titlecase }}
+      </mat-radio-button>
+    </ng-container>
+  </mat-radio-group>
+  <mat-error *ngIf="control.hasError('required') && form.submitted">
+    {{ getError("required") }}
+  </mat-error>
+</ng-container>

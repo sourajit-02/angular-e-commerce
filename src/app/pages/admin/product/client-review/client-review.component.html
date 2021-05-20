@@ -1,0 +1,14 @@
+<div class="header-wrapper">
+  <h5>Client Review Image</h5>
+  <button mat-flat-button (click)="openDialog('Add', {})" class="button">
+    Add Client Review Image
+  </button>
+</div>
+<app-table
+  [tableType]="tableType"
+  [pagination]="true"
+  [displayedColumns]="displayedColumns"
+  [tableData]="dataSource"
+  [paginationData]="paginationData"
+>
+</app-table>

@@ -1,0 +1,2230 @@
+{
+  "website-products": [
+    {
+      "imgUrl": "../../../assets/item/item-03.jpg",
+      "name": "Boxy7 T-Shirt with Roll Sleeve",
+      "size": "L",
+      "color": "gray",
+      "price": 20,
+      "viewUrl": "boxy7-t-shirt-with-roll-sleeve",
+      "id": 1
+    },
+    {
+      "imgUrl": "../../../assets/item/item-04.jpg",
+      "name": "Boxy6 T-Shirt with Roll Sleeve",
+      "size": "XL",
+      "color": "red",
+      "price": 20,
+      "viewUrl": "boxy6-t-shirt-with-roll-sleeve",
+      "id": 2
+    },
+    {
+      "imgUrl": "../../../assets/item/item-10.jpg",
+      "name": "Boxy5 T-Shirt with Roll Sleeve",
+      "size": "S",
+      "color": "black",
+      "price": 20,
+      "viewUrl": "boxy5-t-shirt-with-roll-sleeve",
+      "id": 3
+    },
+    {
+      "imgUrl": "../../../assets/item/item-11.jpg",
+      "name": "Boxy4 T-Shirt with Roll Sleeve",
+      "size": "S",
+      "color": "red",
+      "price": 20,
+      "viewUrl": "boxy4-t-shirt-with-roll-sleeve",
+      "id": 4
+    },
+    {
+      "imgUrl": "../../../assets/item/item-12.jpg",
+      "name": "Boxy3 T-Shirt with Roll Sleeve",
+      "size": "L",
+      "color": "black",
+      "price": 20,
+      "viewUrl": "boxy3-t-shirt-with-roll-sleeve",
+      "id": 5
+    },
+    {
+      "imgUrl": "../../../assets/item/item-13.jpg",
+      "name": "Boxy2 T-Shirt with Roll Sleeve",
+      "size": "S",
+      "color": "black",
+      "price": 20,
+      "viewUrl": "boxy2-t-shirt-with-roll-sleeve",
+      "id": 6
+    },
+    {
+      "imgUrl": "../../../assets/item/item-15.jpg",
+      "name": "Boxy1 T-Shirt with Roll Sleeve",
+      "size": "M",
+      "color": "gray",
+      "price": 20,
+      "viewUrl": "boxy1-t-shirt-with-roll-sleeve",
+      "id": 7
+    },
+    {
+      "imgUrl": "../../../assets/item/item-16.jpg",
+      "name": "Boxy T-Shirt with Roll Sleeve Detail",
+      "size": "M",
+      "color": "black",
+      "price": 20,
+      "viewUrl": "boxy-t-shirt-with-roll-sleeve-detail",
+      "id": 8
+    }
+  ],
+  "filtering-options": [
+    {
+      "color1": {
+        "name": "red"
+      },
+      "color2": {
+        "name": "black"
+      },
+      "color3": {
+        "name": "gray"
+      },
+      "id": 1
+    },
+    {
+      "price1": {
+        "min": 0,
+        "max": 20
+      },
+      "price2": {
+        "min": 20,
+        "max": 40
+      },
+      "price3": {
+        "min": 40,
+        "max": 60
+      },
+      "id": 2
+    },
+    {
+      "size1": {
+        "size": "S"
+      },
+      "size2": {
+        "size": "M"
+      },
+      "size3": {
+        "size": "L"
+      },
+      "size4": {
+        "size": "XL"
+      },
+      "id": 3
+    },
+    {
+      "category1": {
+        "type": "Best Seller",
+        "link": "/website/product/best-seller"
+      },
+      "category2": {
+        "type": "Featured",
+        "link": "/website/product/featured"
+      },
+      "id": 4
+    }
+  ],
+  "cart": [
+    {
+      "product": {
+        "productId": 1,
+        "productUrl": "boxy7-t-shirt-with-roll-sleeve",
+        "productImage": "../../../assets/item/item-03.jpg",
+        "productName": "Boxy7 T-Shirt with Roll Sleeve",
+        "productSize": "L",
+        "productColor": "gray",
+        "productPrice": 20
+      },
+      "id": 3
+    },
+    {
+      "product": {
+        "productId": 1,
+        "productUrl": "boxy7-t-shirt-with-roll-sleeve",
+        "productImage": "../../../assets/item/item-03.jpg",
+        "productName": "Boxy7 T-Shirt with Roll Sleeve",
+        "productSize": "L",
+        "productColor": "gray",
+        "productPrice": 20
+      },
+      "id": 4
+    },
+    {
+      "product": {
+        "productId": 1,
+        "productUrl": "boxy7-t-shirt-with-roll-sleeve",
+        "productImage": "../../../assets/item/item-03.jpg",
+        "productName": "Boxy7 T-Shirt with Roll Sleeve",
+        "productSize": "L",
+        "productColor": "gray",
+        "productPrice": 20
+      },
+      "id": 5
+    },
+    {
+      "product": {
+        "productId": 1,
+        "productUrl": "boxy7-t-shirt-with-roll-sleeve",
+        "productImage": "../../../assets/item/item-03.jpg",
+        "productName": "Boxy7 T-Shirt with Roll Sleeve",
+        "productSize": "L",
+        "productColor": "gray",
+        "productPrice": 20
+      },
+      "id": 6
+    },
+    {
+      "product": {
+        "productId": 1,
+        "productUrl": "boxy7-t-shirt-with-roll-sleeve",
+        "productImage": "../../../assets/item/item-03.jpg",
+        "productName": "Boxy7 T-Shirt with Roll Sleeve",
+        "productSize": "L",
+        "productColor": "gray",
+        "productPrice": 20
+      },
+      "id": 7
+    },
+    {
+      "product": {
+        "productId": 1,
+        "productUrl": "boxy7-t-shirt-with-roll-sleeve",
+        "productImage": "../../../assets/item/item-03.jpg",
+        "productName": "Boxy7 T-Shirt with Roll Sleeve",
+        "productSize": "L",
+        "productColor": "gray",
+        "productPrice": 20
+      },
+      "id": 8
+    },
+    {
+      "product": {
+        "productId": 4,
+        "productUrl": "boxy4-t-shirt-with-roll-sleeve",
+        "productImage": "../../../assets/item/item-11.jpg",
+        "productName": "Boxy4 T-Shirt with Roll Sleeve",
+        "productSize": "S",
+        "productColor": "red",
+        "productPrice": 20
+      },
+      "id": 11
+    },
+    {
+      "product": {
+        "productId": 5,
+        "productUrl": "boxy3-t-shirt-with-roll-sleeve",
+        "productImage": "../../../assets/item/item-12.jpg",
+        "productName": "Boxy3 T-Shirt with Roll Sleeve",
+        "productSize": "L",
+        "productColor": "black",
+        "productPrice": 20
+      },
+      "id": 12
+    },
+    {
+      "product": {
+        "productId": 6,
+        "productUrl": "boxy2-t-shirt-with-roll-sleeve",
+        "productImage": "../../../assets/item/item-13.jpg",
+        "productName": "Boxy2 T-Shirt with Roll Sleeve",
+        "productSize": "S",
+        "productColor": "black",
+        "productPrice": 20
+      },
+      "id": 13
+    },
+    {
+      "product": {
+        "productId": 7,
+        "productUrl": "boxy1-t-shirt-with-roll-sleeve",
+        "productImage": "../../../assets/item/item-15.jpg",
+        "productName": "Boxy1 T-Shirt with Roll Sleeve",
+        "productSize": "M",
+        "productColor": "gray",
+        "productPrice": 20
+      },
+      "id": 14
+    },
+    {
+      "product": {
+        "productId": 8,
+        "productUrl": "boxy-t-shirt-with-roll-sleeve-detail",
+        "productImage": "../../../assets/item/item-16.jpg",
+        "productName": "Boxy T-Shirt with Roll Sleeve Detail",
+        "productSize": "M",
+        "productColor": "black",
+        "productPrice": 20
+      },
+      "id": 15
+    }
+  ],
+  "users": [
+    {
+      "firstName": "John",
+      "lastName": "Hastings",
+      "email": "johnhastings@yahoo.com",
+      "password": "john1970",
+      "id": 1
+    },
+    {
+      "firstName": "Marrie",
+      "lastName": "Smalling",
+      "email": "marriesmalling@yahoo.com",
+      "password": "marrie34",
+      "id": 2
+    },
+    {
+      "firstName": "Robert",
+      "lastName": "Shaw",
+      "email": "robertshaw@yahoo.com",
+      "password": "shawrobert206",
+      "id": 3
+    },
+    {
+      "firstName": "Jimmy",
+      "lastName": "Hearts",
+      "email": "jimmyhearts@yahoo.com",
+      "password": "jimh5698",
+      "id": 4
+    },
+    {
+      "firstName": "Harris",
+      "lastName": "Stewarts",
+      "email": "stewartsharry@yahoo.com",
+      "password": "hstewarts002",
+      "id": 5
+    },
+    {
+      "firstName": "Nico",
+      "lastName": "Robin",
+      "email": "nico@robin.com",
+      "password": "nicorobin420420",
+      "id": 6
+    }
+  ],
+  "checkout": [
+    {
+      "email": "abcd@abcd.com",
+      "firstName": "Abc",
+      "lastName": "Bca",
+      "address": "Abc-ggcgjcjvj",
+      "address2": "",
+      "city": "gygyjgyj",
+      "country": "india",
+      "state": "state",
+      "zipCode": "",
+      "phone": "8687879289",
+      "id": 1
+    },
+    {
+      "email": "abcd@abcd.com",
+      "firstName": "Avadvsdfas",
+      "lastName": "dbfdbdfbdf",
+      "address": "bdfbzdsbdb",
+      "address2": "",
+      "city": "dfbdbdb",
+      "country": "india",
+      "state": "state",
+      "zipCode": "",
+      "phone": "6565546556",
+      "id": 2
+    },
+    {
+      "email": "abcd@abcd.com",
+      "firstName": "sgadsgdfg",
+      "lastName": "ddgsbdd",
+      "address": "dgdfgdfg",
+      "address2": "",
+      "city": "dfgdgd",
+      "country": "india",
+      "state": "state",
+      "zipCode": "",
+      "phone": "5364546547",
+      "id": 3
+    }
+  ],
+  "country": [
+    {
+      "id": "1",
+      "name": "Albania",
+      "value": "albania"
+    },
+    {
+      "id": "2",
+      "name": "Åland Islands",
+      "value": "aland Islands"
+    },
+    {
+      "id": "3",
+      "name": "Algeria",
+      "value": "algeria"
+    },
+    {
+      "id": "3",
+      "name": "American Samoa",
+      "value": "american Samoa"
+    },
+    {
+      "id": "4",
+      "name": "Andorra",
+      "value": "andorra"
+    },
+    {
+      "id": "5",
+      "name": "Angola",
+      "value": "angola"
+    },
+    {
+      "id": "6",
+      "name": "Anguilla",
+      "value": "anguilla"
+    },
+    {
+      "id": "7",
+      "name": "Antarctica",
+      "value": "antarctica"
+    },
+    {
+      "id": "8",
+      "name": "Antigua and Barbuda",
+      "value": "antigua and barbuda"
+    },
+    {
+      "id": "9",
+      "name": "Argentina",
+      "value": "argentina"
+    },
+    {
+      "id": "10",
+      "name": "Armenia",
+      "value": "armenia"
+    },
+    {
+      "id": "11",
+      "name": "Aruba",
+      "value": "aruba"
+    },
+    {
+      "id": "12",
+      "name": "Australia",
+      "value": "australia"
+    },
+    {
+      "id": "13",
+      "name": "Austria",
+      "value": "austria"
+    },
+    {
+      "id": "14",
+      "name": "Azerbaijan",
+      "value": "azerbaijan"
+    },
+    {
+      "id": "15",
+      "name": "Bahamas (the)",
+      "value": "bahamas"
+    },
+    {
+      "id": "16",
+      "name": "Bahrain",
+      "value": "bahrain"
+    },
+    {
+      "id": "17",
+      "name": "Bangladesh",
+      "value": "bangladesh"
+    },
+    {
+      "id": "18",
+      "name": "Barbados",
+      "value": "barbados"
+    },
+    {
+      "id": "19",
+      "name": "Belarus",
+      "value": "belarus"
+    },
+    {
+      "id": "20",
+      "name": "Belgium",
+      "value": "belgium"
+    },
+    {
+      "id": "21",
+      "name": "Belize",
+      "value": "belize"
+    },
+    {
+      "id": "22",
+      "name": "Benin",
+      "value": "benin"
+    },
+    {
+      "id": "23",
+      "name": "Bermuda",
+      "value": "bermuda"
+    },
+    {
+      "id": "24",
+      "name": "Bhutan",
+      "value": "bhutan"
+    },
+    {
+      "id": "25",
+      "name": "Bolivia (Plurinational State of)",
+      "value": "bolivia"
+    },
+    {
+      "id": "26",
+      "name": "Bonaire, Sint Eustatius and Saba",
+      "value": "bonaire"
+    },
+    {
+      "id": "27",
+      "name": "Bosnia and Herzegovina",
+      "value": "bosnia and herzegovina"
+    },
+    {
+      "id": "28",
+      "name": "Botswana",
+      "value": "botswana"
+    },
+    {
+      "id": "29",
+      "name": "Bouvet Island",
+      "value": "bouvet island"
+    },
+    {
+      "id": "30",
+      "name": "Brazil",
+      "value": "brazil"
+    },
+    {
+      "id": "31",
+      "name": "British Indian Ocean Territory (the)",
+      "value": "british indian ocean territory"
+    },
+    {
+      "id": "32",
+      "name": "Brunei Darussalam",
+      "value": "brunei darussalam"
+    },
+    {
+      "id": "33",
+      "name": "Bulgaria",
+      "value": "bulgaria"
+    },
+    {
+      "id": "34",
+      "name": "Burkina Faso",
+      "value": "burkina faso"
+    },
+    {
+      "id": "35",
+      "name": "Burundi",
+      "value": "burundi"
+    },
+    {
+      "id": "36",
+      "name": "Cabo Verde",
+      "value": "cabo verde"
+    },
+    {
+      "id": "37",
+      "name": "Cambodia",
+      "value": "cambodia"
+    },
+    {
+      "id": "38",
+      "name": "Cameroon",
+      "value": "cameroon"
+    },
+    {
+      "id": "39",
+      "name": "Canada",
+      "value": "cananda"
+    },
+    {
+      "id": "40",
+      "name": "Cayman Islands (the)",
+      "value": "cayman islands"
+    },
+    {
+      "id": "41",
+      "name": "Central African Republic (the)",
+      "value": "central african republic"
+    },
+    {
+      "id": "42",
+      "name": "Chad",
+      "value": "chad"
+    },
+    {
+      "id": "43",
+      "name": "Chile",
+      "value": "chile"
+    },
+    {
+      "id": "44",
+      "name": "China",
+      "value": "china"
+    },
+    {
+      "id": "45",
+      "name": "Christmas Island",
+      "value": "christmas island"
+    },
+    {
+      "id": "46",
+      "name": "Cocos (Keeling) Islands (the)",
+      "value": "cocos islands"
+    },
+    {
+      "id": "47",
+      "name": "Colombia",
+      "value": "colombia"
+    },
+    {
+      "id": "48",
+      "name": "Comoros (the)",
+      "value": "comoros"
+    },
+    {
+      "id": "49",
+      "name": "Congo (the Democratic Republic of the)",
+      "value": "the democratic republic of congo"
+    },
+    {
+      "id": "50",
+      "name": "Congo (the)",
+      "value": "congo"
+    },
+    {
+      "id": "51",
+      "name": "Cook Islands (the)",
+      "value": "cook islands"
+    },
+    {
+      "id": "52",
+      "name": "Costa Rica",
+      "value": "costa rica"
+    },
+    {
+      "id": "53",
+      "name": "Croatia",
+      "value": "croatia"
+    },
+    {
+      "id": "54",
+      "name": "Cuba",
+      "value": "cuba"
+    },
+    {
+      "id": "55",
+      "name": "Curaçao",
+      "value": "curacao"
+    },
+    {
+      "id": "56",
+      "name": "Cyprus",
+      "value": "cyprus"
+    },
+    {
+      "id": "57",
+      "name": "Czechia",
+      "value": "czechia"
+    },
+    {
+      "id": "58",
+      "name": "Côte d'Ivoire",
+      "value": "cote d'ivoire"
+    },
+    {
+      "id": "59",
+      "name": "Denmark",
+      "value": "denmark"
+    },
+    {
+      "id": "60",
+      "name": "Djibouti",
+      "value": "djibouti"
+    },
+    {
+      "id": "61",
+      "name": "Dominica",
+      "value": "dominica"
+    },
+    {
+      "id": "62",
+      "name": "Dominican Republic (the)",
+      "value": "dominican republic"
+    },
+    {
+      "id": "63",
+      "name": "Ecuador",
+      "value": "ecuador"
+    },
+    {
+      "id": "64",
+      "name": "Egypt",
+      "value": "egypt"
+    },
+    {
+      "id": "65",
+      "name": "El Salvador",
+      "value": "el salvador"
+    },
+    {
+      "id": "66",
+      "name": "Equatorial Guinea",
+      "value": "equatorial guinea"
+    },
+    {
+      "id": "67",
+      "name": "Eritrea",
+      "value": "eritrea"
+    },
+    {
+      "id": "68",
+      "name": "Estonia",
+      "value": "estonia"
+    },
+    {
+      "id": "69",
+      "name": "Eswatini",
+      "value": "eswatini"
+    },
+    {
+      "id": "70",
+      "name": "Ethiopia",
+      "value": "ethiopia"
+    },
+    {
+      "id": "71",
+      "name": "Falkland Islands (the) [Malvinas]",
+      "value": "falkland islands"
+    },
+    {
+      "id": "72",
+      "name": "Faroe Islands (the)",
+      "value": "faroe islands"
+    },
+    {
+      "id": "73",
+      "name": "Fiji",
+      "value": "fiji"
+    },
+    {
+      "id": "74",
+      "name": "Finland",
+      "value": "finland"
+    },
+    {
+      "id": "75",
+      "name": "France",
+      "value": "france"
+    },
+    {
+      "id": "76",
+      "name": "French Guiana",
+      "value": "french guiana"
+    },
+    {
+      "id": "77",
+      "name": "French Polynesia",
+      "value": "french polynesia"
+    },
+    {
+      "id": "78",
+      "name": "French Southern Territories (the)",
+      "value": "french southern territories"
+    },
+    {
+      "id": "79",
+      "name": "Gabon",
+      "value": "gabon"
+    },
+    {
+      "id": "80",
+      "name": "Gambia (the)",
+      "value": "gambia"
+    },
+    {
+      "id": "81",
+      "name": "Georgia",
+      "value": "georgia"
+    },
+    {
+      "id": "82",
+      "name": "Germany",
+      "value": "germany"
+    },
+    {
+      "id": "83",
+      "name": "Ghana",
+      "value": "ghana"
+    },
+    {
+      "id": "84",
+      "name": "Gibraltar",
+      "value": "gibraltar"
+    },
+    {
+      "id": "85",
+      "name": "Greece",
+      "value": "greece"
+    },
+    {
+      "id": "86",
+      "name": "Greenland",
+      "value": "greenland"
+    },
+    {
+      "id": "87",
+      "name": "Grenada",
+      "value": "grenada"
+    },
+    {
+      "id": "88",
+      "name": "Guadeloupe",
+      "value": "guadeloupe"
+    },
+    {
+      "id": "89",
+      "name": "Guam",
+      "value": "guam"
+    },
+    {
+      "id": "90",
+      "name": "Guatemala",
+      "value": "guatemala"
+    },
+    {
+      "id": "91",
+      "name": "Guernsey",
+      "value": "guernsey"
+    },
+    {
+      "id": "92",
+      "name": "Guinea",
+      "value": "guinea"
+    },
+    {
+      "id": "93",
+      "name": "Guinea-Bissau",
+      "value": "guinea-bissau"
+    },
+    {
+      "id": "94",
+      "name": "Guyana",
+      "value": "guyana"
+    },
+    {
+      "id": "95",
+      "name": "Haiti",
+      "value": "haiti"
+    },
+    {
+      "id": "96",
+      "name": "Heard Island and McDonald Islands",
+      "value": "heard islands and mcdonald islands"
+    },
+    {
+      "id": "97",
+      "name": "Holy See (the)",
+      "value": "holy see"
+    },
+    {
+      "id": "98",
+      "name": "Honduras",
+      "value": "honduras"
+    },
+    {
+      "id": "99",
+      "name": "Hong Kong",
+      "value": "hong kong"
+    },
+    {
+      "id": "100",
+      "name": "Hungary",
+      "value": "hungary"
+    },
+    {
+      "id": "101",
+      "name": "Iceland",
+      "value": "icelnad"
+    },
+    {
+      "id": "102",
+      "name": "India",
+      "value": "india"
+    },
+    {
+      "id": "103",
+      "name": "Indonesia",
+      "value": "indonesia"
+    },
+    {
+      "id": "104",
+      "name": "Iran (Islamic Republic of)",
+      "value": "iran"
+    },
+    {
+      "id": "105",
+      "name": "Iraq",
+      "value": "iraq"
+    },
+    {
+      "id": "106",
+      "name": "Ireland",
+      "value": "ireland"
+    },
+    {
+      "id": "107",
+      "name": "Isle of Man",
+      "value": "isle of man"
+    },
+    {
+      "id": "108",
+      "name": "Israel",
+      "value": "israel"
+    },
+    {
+      "id": "109",
+      "name": "Italy",
+      "value": "italy"
+    },
+    {
+      "id": "110",
+      "name": "Jamaica",
+      "value": "jamaica"
+    },
+    {
+      "id": "111",
+      "name": "Japan",
+      "value": "japan"
+    },
+    {
+      "id": "112",
+      "name": "Jersey",
+      "value": "jersey"
+    },
+    {
+      "id": "113",
+      "name": "Jordan",
+      "value": "jordan"
+    },
+    {
+      "id": "114",
+      "name": "Kazakhstan",
+      "value": "kazakhstan"
+    },
+    {
+      "id": "115",
+      "name": "Kenya",
+      "value": "kenya"
+    },
+    {
+      "id": "116",
+      "name": "Kiribati",
+      "value": "kiribati"
+    },
+    {
+      "id": "117",
+      "name": "Korea (the Democratic People's Republic of)",
+      "value": "the democratic people's republic of korea"
+    },
+    {
+      "id": "118",
+      "name": "Korea (the Republic of)",
+      "value": "the republic of korea"
+    },
+    {
+      "id": "119",
+      "name": "Kuwait",
+      "value": "kuwait"
+    },
+    {
+      "id": "120",
+      "name": "Kyrgyzstan",
+      "value": "kyrgyzstan"
+    },
+    {
+      "id": "121",
+      "name": "Lao People's Democratic Republic (the)",
+      "value": "lao people's democratic republic"
+    },
+    {
+      "id": "122",
+      "name": "Latvia",
+      "value": "latvia"
+    },
+    {
+      "id": "123",
+      "name": "Lebanon",
+      "value": "lebanon"
+    },
+    {
+      "id": "124",
+      "name": "Lesotho",
+      "value": "lesotho"
+    },
+    {
+      "id": "125",
+      "name": "Liberia",
+      "value": "liberia"
+    },
+    {
+      "id": "126",
+      "name": "Libya",
+      "value": "libya"
+    },
+    {
+      "id": "127",
+      "name": "Liechtenstein",
+      "value": "liechtenstein"
+    },
+    {
+      "id": "128",
+      "name": "Lithuania",
+      "value": "lithuania"
+    },
+    {
+      "id": "129",
+      "name": "Luxembourg",
+      "value": "luxembourg"
+    },
+    {
+      "id": "130",
+      "name": "Macao",
+      "value": "macao"
+    },
+    {
+      "id": "131",
+      "name": "Madagascar",
+      "value": "madagascar"
+    },
+    {
+      "id": "132",
+      "name": "Malawi",
+      "value": "malawi"
+    },
+    {
+      "id": "133",
+      "name": "Malaysia",
+      "value": "malaysia"
+    },
+    {
+      "id": "134",
+      "name": "Maldives",
+      "value": "maldives"
+    },
+    {
+      "id": "135",
+      "name": "Mali",
+      "value": "mali"
+    },
+    {
+      "id": "136",
+      "name": "Malta",
+      "value": "malta"
+    },
+    {
+      "id": "137",
+      "name": "Marshall Islands (the)",
+      "value": "marshall islands"
+    },
+    {
+      "id": "138",
+      "name": "Martinique",
+      "value": "martinique"
+    },
+    {
+      "id": "139",
+      "name": "Mauritania",
+      "value": "mauritania"
+    },
+    {
+      "id": "140",
+      "name": "Mauritius",
+      "value": "mauritius"
+    },
+    {
+      "id": "141",
+      "name": "Mayotte",
+      "value": "mayotte"
+    },
+    {
+      "id": "142",
+      "name": "Mexico",
+      "value": "mexico"
+    },
+    {
+      "id": "143",
+      "name": "Micronesia (Federated States of)",
+      "value": "micronesia"
+    },
+    {
+      "id": "144",
+      "name": "Moldova (the Republic of)",
+      "value": "moldova"
+    },
+    {
+      "id": "145",
+      "name": "Monaco",
+      "value": "monaco"
+    },
+    {
+      "id": "146",
+      "name": "Mongolia",
+      "value": "mongolia"
+    },
+    {
+      "id": "147",
+      "name": "Montenegro",
+      "value": "montenegro"
+    },
+    {
+      "id": "148",
+      "name": "Montserrat",
+      "value": "montserrat"
+    },
+    {
+      "id": "149",
+      "name": "Morocco",
+      "value": "morocco"
+    },
+    {
+      "id": "150",
+      "name": "Mozambique",
+      "value": "mozambique"
+    },
+    {
+      "id": "151",
+      "name": "Myanmar",
+      "value": "myanmar"
+    },
+    {
+      "id": "152",
+      "name": "Namibia",
+      "value": "namibia"
+    },
+    {
+      "id": "153",
+      "name": "Nauru",
+      "value": "nauru"
+    },
+    {
+      "id": "154",
+      "name": "Nepal",
+      "value": "nepal"
+    },
+    {
+      "id": "155",
+      "name": "Netherlands (the)",
+      "value": "Netherlands"
+    },
+    {
+      "id": "156",
+      "name": "New Caledonia",
+      "value": "new caledoina"
+    },
+    {
+      "id": "157",
+      "name": "New Zealand",
+      "value": "new zealand"
+    },
+    {
+      "id": "158",
+      "name": "Nicaragua",
+      "value": "nicaragua"
+    },
+    {
+      "id": "159",
+      "name": "Niger (the)",
+      "value": "niger"
+    },
+    {
+      "id": "160",
+      "name": "Nigeria",
+      "value": "nigeria"
+    },
+    {
+      "id": "161",
+      "name": "Niue",
+      "value": "niue"
+    },
+    {
+      "id": "162",
+      "name": "Norfolk Island",
+      "value": "norfolk island"
+    },
+    {
+      "id": "163",
+      "name": "Northern Mariana Islands (the)",
+      "value": "northern mariana islands"
+    },
+    {
+      "id": "164",
+      "name": "Norway",
+      "value": "norway"
+    },
+    {
+      "id": "165",
+      "name": "Oman",
+      "value": "oman"
+    },
+    {
+      "id": "166",
+      "name": "Pakistan",
+      "value": "pakistan"
+    },
+    {
+      "id": "167",
+      "name": "Palau",
+      "value": "palau"
+    },
+    {
+      "id": "168",
+      "name": "Palestine, State of",
+      "value": "state of palestine"
+    },
+    {
+      "id": "169",
+      "name": "Panama",
+      "value": "panama"
+    },
+    {
+      "id": "170",
+      "name": "Papua New Guinea",
+      "value": "papua new guinea"
+    },
+    {
+      "id": "171",
+      "name": "Paraguay",
+      "value": "paraguay"
+    },
+    {
+      "id": "172",
+      "name": "Peru",
+      "value": "peru"
+    },
+    {
+      "id": "173",
+      "name": "Philippines (the)",
+      "value": "philippines"
+    },
+    {
+      "id": "174",
+      "name": "Pitcairn",
+      "value": "pitcairn"
+    },
+    {
+      "id": "175",
+      "name": "Poland",
+      "value": "poland"
+    },
+    {
+      "id": "176",
+      "name": "Portugal",
+      "value": "portugal"
+    },
+    {
+      "id": "177",
+      "name": "Puerto Rico",
+      "value": "puerto rico"
+    },
+    {
+      "id": "178",
+      "name": "Qatar",
+      "value": "qatar"
+    },
+    {
+      "id": "179",
+      "name": "Republic of North Macedonia",
+      "value": "republic of north macedonia"
+    },
+    {
+      "id": "180",
+      "name": "Romania",
+      "value": "romania"
+    },
+    {
+      "id": "181",
+      "name": "Russian Federation (the)",
+      "value": "russian federation"
+    },
+    {
+      "id": "182",
+      "name": "Rwanda",
+      "value": "rwanda"
+    },
+    {
+      "id": "183",
+      "name": "Réunion",
+      "value": "reunion"
+    },
+    {
+      "id": "184",
+      "name": "Saint Barthélemy",
+      "value": "saint barthelemy"
+    },
+    {
+      "id": "185",
+      "name": "Saint Helena, Ascension and Tristan da Cunha",
+      "value": "saint helena"
+    },
+    {
+      "id": "186",
+      "name": "Saint Kitts and Nevis",
+      "value": "saint kitts and nevis"
+    },
+    {
+      "id": "187",
+      "name": "Saint Lucia",
+      "value": "saint lucia"
+    },
+    {
+      "id": "188",
+      "name": "Saint Martin (French part)",
+      "value": "saint martin"
+    },
+    {
+      "id": "189",
+      "name": "Saint Pierre and Miquelon",
+      "value": "saint pierre and miquelon"
+    },
+    {
+      "id": "190",
+      "name": "Saint Vincent and the Grenadines",
+      "value": "saint vincent and grenadines"
+    },
+    {
+      "id": "191",
+      "name": "Samoa",
+      "value": "samoa"
+    },
+    {
+      "id": "192",
+      "name": "San Marino",
+      "value": "san marino"
+    },
+    {
+      "id": "193",
+      "name": "Sao Tome and Principe",
+      "value": "sao tome and principe"
+    },
+    {
+      "id": "194",
+      "name": "Saudi Arabia",
+      "value": "saudi arabia"
+    },
+    {
+      "id": "195",
+      "name": "Senegal",
+      "value": "senegal"
+    },
+    {
+      "id": "196",
+      "name": "Serbia",
+      "value": "serbia"
+    },
+    {
+      "id": "197",
+      "name": "Seychelles",
+      "value": "seychelles"
+    },
+    {
+      "id": "198",
+      "name": "Sierra Leone",
+      "value": "sierra leone"
+    },
+    {
+      "id": "199",
+      "name": "Singapore",
+      "value": "singapore"
+    },
+    {
+      "id": "200",
+      "name": "Sint Maarten (Dutch part)",
+      "value": "sint maarten"
+    },
+    {
+      "id": "201",
+      "name": "Slovakia",
+      "value": "slovakia"
+    },
+    {
+      "id": "202",
+      "name": "Slovenia",
+      "value": "slovenia"
+    },
+    {
+      "id": "203",
+      "name": "Solomon Islands",
+      "value": "solomon islands"
+    },
+    {
+      "id": "204",
+      "name": "Somalia",
+      "value": "somalia"
+    },
+    {
+      "id": "205",
+      "name": "South Africa",
+      "value": "south africa"
+    },
+    {
+      "id": "206",
+      "name": "South Georgia and the South Sandwich Islands",
+      "value": "south georgia and the south sandwich islands"
+    },
+    {
+      "id": "207",
+      "name": "South Sudan",
+      "value": "south sudan"
+    },
+    {
+      "id": "208",
+      "name": "Spain",
+      "value": "spain"
+    },
+    {
+      "id": "209",
+      "name": "Sri Lanka",
+      "value": "sri lanka"
+    },
+    {
+      "id": "210",
+      "name": "Sudan (the)",
+      "value": "sudan"
+    },
+    {
+      "id": "211",
+      "name": "Suriname",
+      "value": "suriname"
+    },
+    {
+      "id": "212",
+      "name": "Svalbard and Jan Mayen",
+      "value": "svalobard and jan mayen"
+    },
+    {
+      "id": "213",
+      "name": "Sweden",
+      "value": "sweden"
+    },
+    {
+      "id": "214",
+      "name": "Switzerland",
+      "value": "switzerland"
+    },
+    {
+      "id": "215",
+      "name": "Syrian Arab Republic",
+      "value": "syrian arab republic"
+    },
+    {
+      "id": "216",
+      "name": "Taiwan (Province of China)",
+      "value": "taiwan"
+    },
+    {
+      "id": "217",
+      "name": "Tajikistan",
+      "value": "tajikistan"
+    },
+    {
+      "id": "218",
+      "name": "Tanzania, United Republic of",
+      "value": "united republic of tanzania"
+    },
+    {
+      "id": "219",
+      "name": "Thailand",
+      "value": "thailand"
+    },
+    {
+      "id": "220",
+      "name": "Timor-Leste",
+      "value": "timor-leste"
+    },
+    {
+      "id": "221",
+      "name": "Togo",
+      "value": "togo"
+    },
+    {
+      "id": "222",
+      "name": "Tokelau",
+      "value": "tokelau"
+    },
+    {
+      "id": "223",
+      "name": "Tonga",
+      "value": "tonga"
+    },
+    {
+      "id": "224",
+      "name": "Trinidad and Tobago",
+      "value": "trinidad and tobago"
+    },
+    {
+      "id": "225",
+      "name": "Tunisia",
+      "value": "tunisia"
+    },
+    {
+      "id": "226",
+      "name": "Turkey",
+      "value": "turkey"
+    },
+    {
+      "id": "227",
+      "name": "Turkmenistan",
+      "value": "turkmenistan"
+    },
+    {
+      "id": "228",
+      "name": "Turks and Caicos Islands (the)",
+      "value": "turks and caicos islands"
+    },
+    {
+      "id": "229",
+      "name": "Tuvalu",
+      "value": "tuvalu"
+    },
+    {
+      "id": "230",
+      "name": "Uganda",
+      "value": "uganda"
+    },
+    {
+      "id": "231",
+      "name": "Ukraine",
+      "value": "ukraine"
+    },
+    {
+      "id": "232",
+      "name": "United Arab Emirates (the)",
+      "value": "united arab emirates"
+    },
+    {
+      "id": "233",
+      "name": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "value": "united kingdom of great britain and northern ireland"
+    },
+    {
+      "id": "234",
+      "name": "United States Minor Outlying Islands (the)",
+      "value": "united states minor outlying islands"
+    },
+    {
+      "id": "235",
+      "name": "United States of America (the)",
+      "value": "united states of america"
+    },
+    {
+      "id": "236",
+      "name": "Uruguay",
+      "value": "uruguay"
+    },
+    {
+      "id": "237",
+      "name": "Uzbekistan",
+      "value": "uzbekistan"
+    },
+    {
+      "id": "238",
+      "name": "Vanuatu",
+      "value": "vanuatu"
+    },
+    {
+      "id": "239",
+      "name": "Venezuela (Bolivarian Republic of)",
+      "value": "venezuela"
+    },
+    {
+      "id": "240",
+      "name": "Viet Nam",
+      "value": "viet nam"
+    },
+    {
+      "id": "241",
+      "name": "Virgin Islands (British)",
+      "value": "virgin islands british"
+    },
+    {
+      "id": "242",
+      "name": "Virgin Islands (U.S.)",
+      "value": "virgin islands u.s."
+    },
+    {
+      "id": "243",
+      "name": "Wallis and Futuna",
+      "value": "wallis and futuna"
+    },
+    {
+      "id": "244",
+      "name": "Western Sahara",
+      "value": "western sahara"
+    },
+    {
+      "id": "245",
+      "name": "Yemen",
+      "value": "yemen"
+    },
+    {
+      "id": "246",
+      "name": "Zambia",
+      "value": "zambia"
+    },
+    {
+      "id": "247",
+      "name": "Zimbabwe",
+      "value": "zimbabwe"
+    }
+  ],
+  "state-india": [
+    {
+      "id": "1",
+      "name": "Andaman and Nicobar Islands",
+      "value": "andaman and nicobar islands"
+    },
+    {
+      "id": "2",
+      "name": "Andhra Pradesh",
+      "value": "andhra pradesh"
+    },
+    {
+      "id": "3",
+      "name": "Arunachal Pradesh",
+      "value": "arunachal pradesh"
+    },
+    {
+      "id": "4",
+      "name": "Assam",
+      "value": "assam"
+    },
+    {
+      "id": "5",
+      "name": "Bihar",
+      "value": "bihar"
+    },
+    {
+      "id": "6",
+      "name": "Chandigarh",
+      "value": "chandigarh"
+    },
+    {
+      "id": "7",
+      "name": "Chhattisgarh",
+      "value": "chhattisgarh"
+    },
+    {
+      "id": "8",
+      "name": "Dadra and Nagar Haveli",
+      "value": "dadra and nagar haveli"
+    },
+    {
+      "id": "9",
+      "name": "Daman and Diu",
+      "value": "daman and diu"
+    },
+    {
+      "id": "10",
+      "name": "Delhi",
+      "value": "delhi"
+    },
+    {
+      "id": "11",
+      "name": "Goa",
+      "value": "goa"
+    },
+    {
+      "id": "12",
+      "name": "Gujarat",
+      "value": "gujarat"
+    },
+    {
+      "id": "13",
+      "name": "Haryana",
+      "value": "haryana"
+    },
+    {
+      "id": "14",
+      "name": "Himachal Pradesh",
+      "value": "himachal pradesh"
+    },
+    {
+      "id": "15",
+      "name": "Jammu and Kashmir",
+      "value": "jammu and kashmir"
+    },
+    {
+      "id": "16",
+      "name": "Jharkhand",
+      "value": "jharkhand"
+    },
+    {
+      "id": "17",
+      "name": "Karnataka",
+      "value": "karnataka"
+    },
+    {
+      "id": "18",
+      "name": "Kerala",
+      "value": "kerala"
+    },
+    {
+      "id": "19",
+      "name": "Ladakh",
+      "value": "ladakh"
+    },
+    {
+      "id": "20",
+      "name": "Lakshadweep",
+      "value": "lakshadweep"
+    },
+    {
+      "id": "21",
+      "name": "Madhya Pradesh",
+      "value": "madhya pradesh"
+    },
+    {
+      "id": "22",
+      "name": "Maharashtra",
+      "value": "maharashtra"
+    },
+    {
+      "id": "23",
+      "name": "Manipur",
+      "value": "manipur"
+    },
+    {
+      "id": "24",
+      "name": "Meghalaya",
+      "value": "meghalaya"
+    },
+    {
+      "id": "25",
+      "name": "Mizoram",
+      "value": "mizoram"
+    },
+    {
+      "id": "26",
+      "name": "Nagaland",
+      "value": "nagaland"
+    },
+    {
+      "id": "27",
+      "name": "Odisha",
+      "value": "odisha"
+    },
+    {
+      "id": "28",
+      "name": "Puducherry",
+      "value": "puducherry"
+    },
+    {
+      "id": "29",
+      "name": "Punjab",
+      "value": "punjab"
+    },
+    {
+      "id": "30",
+      "name": "Rajasthan",
+      "value": "rajasthan"
+    },
+    {
+      "id": "31",
+      "name": "Sikkim",
+      "value": "sikkim"
+    },
+    {
+      "id": "32",
+      "name": "Tamil Nadu",
+      "value": "tamil nadu"
+    },
+    {
+      "id": "33",
+      "name": "Telangana",
+      "value": "telangana"
+    },
+    {
+      "id": "34",
+      "name": "Tripura",
+      "value": "tripura"
+    },
+    {
+      "id": "35",
+      "name": "Uttar Pradesh",
+      "value": "uttar pradesh"
+    },
+    {
+      "id": "36",
+      "name": "Uttarakhand",
+      "value": "uttarakhand"
+    },
+    {
+      "id": "37",
+      "name": "West Bengal",
+      "value": "west bengal"
+    }
+  ],
+  "home": [
+    {
+      "id": 1,
+      "slider": {
+        "slider1": "../../../assets/master-slide/master-slide-04.jpg",
+        "slider2": "../../../assets/master-slide/master-slide-02.jpg",
+        "slider3": "../../../assets/master-slide/master-slide-01.jpg"
+      }
+    },
+    {
+      "id": 2,
+      "banner": {
+        "banner1": {
+          "image": "../../../assets/bannerp/banner-01.jpg",
+          "text": "DRESSES",
+          "rows": 2
+        },
+        "banner2": {
+          "image": "../../../assets/bannerp/banner-05.jpg",
+          "text": "WATCHES",
+          "rows": 1
+        },
+        "banner3": {
+          "image": "../../../assets/bannerp/banner-02.jpg",
+          "text": "BAGS",
+          "rows": 2
+        },
+        "banner4": {
+          "image": "../../../assets/bannerp/banner-03.jpg",
+          "text": "FOOTERWEAR",
+          "rows": 2
+        },
+        "banner5": {
+          "image": "../../../assets/bannerp/banner-04.jpg",
+          "text": "SUNGLASSES",
+          "rows": 1
+        },
+        "banner6": {
+          "image": "../../../assets/bannerp/banner-06.jpg",
+          "text": "ACCESSORIES",
+          "rows": 1
+        }
+      }
+    },
+    {
+      "id": 3,
+      "bg-banner": {
+        "bg-banner1": "../../../assets/bg-banner/banner-01.jpg",
+        "bg-banner2": "../../../assets/bg-banner/banner-02.jpg"
+      }
+    },
+    {
+      "id": 4,
+      "blog": {
+        "blog1": {
+          "image": "../../../assets/blog/blog-01.jpg",
+          "text1": "Black Friday Guide: Best Sales & Discount Codes",
+          "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed turpis sed lorem dignissim vulputate nec cursus ante. Nunc sit..."
+        },
+        "blog2": {
+          "image": "../../../assets/blog/blog-02.jpg",
+          "text1": "The White Sneakers Nearly Every Fashion Girls Own",
+          "text2": "Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod. Inter-dum et..."
+        },
+        "blog3": {
+          "image": "../../../assets/blog/blog-03.jpg",
+          "text1": "New York SS 2018 Street Style: By Annina Mislin",
+          "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed turpis sed lorem dignissim vulputate nec cursus ante. Nunc sit..."
+        }
+      }
+    }
+  ],
+  "product-form": [
+    {
+      "fieldType": "input",
+      "label": "Product Id",
+      "type": "number",
+      "hidden": "true",
+      "value": 0,
+      "placeholder": "Product Id",
+      "controller": "product_id"
+    },
+    {
+      "fieldType": "input",
+      "label": "Product Title",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Product Title",
+      "controller": "product_title"
+    },
+    {
+      "fieldType": "input",
+      "label": "Product Name",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Product Name",
+      "controller": "product_name"
+    },
+    {
+      "fieldType": "textarea",
+      "label": "Product Description",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Product Description",
+      "controller": "product_description"
+    },
+    {
+      "fieldType": "input",
+      "label": "Product Quantity",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "placeholder": "Product Quantity",
+      "controller": "product_quantity"
+    },
+    {
+      "fieldType": "input",
+      "label": "Product Price",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "placeholder": "Product Price",
+      "controller": "product_price"
+    },
+    {
+      "fieldType": "input",
+      "label": "Discount Price",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "placeholder": "Discount Price",
+      "controller": "discount_price"
+    },
+    {
+      "fieldType": "input",
+      "label": "Config",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Config",
+      "controller": "config"
+    },
+    {
+      "fieldType": "input",
+      "label": "SKU",
+      "type": "text",
+      "value": "value",
+      "placeholder": "SKU",
+      "controller": "sku"
+    },
+    {
+      "fieldType": "input",
+      "label": "Tax",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "placeholder": "Tax",
+      "controller": "tax"
+    },
+    {
+      "fieldType": "input",
+      "label": "HSN Code",
+      "type": "text",
+      "value": "value",
+      "placeholder": "HSN Code",
+      "controller": "hsn_code"
+    },
+    {
+      "fieldType": "input",
+      "label": "Meta Title",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Meta Title",
+      "controller": "meta_title"
+    },
+    {
+      "fieldType": "input",
+      "label": "Meta Keyword",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Meta Keyword",
+      "controller": "meta_keyword"
+    },
+    {
+      "fieldType": "textarea",
+      "label": "Meta Description",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Meta Description",
+      "controller": "meta_description"
+    },
+    {
+      "fieldType": "input",
+      "label": "Custom Tags",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Custom Tags",
+      "controller": "custom_tags"
+    },
+    {
+      "fieldType": "input",
+      "label": "Key Feature 1",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Key Feature 1",
+      "controller": "key_feature_1"
+    },
+    {
+      "fieldType": "input",
+      "label": "Key Feature 2",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Key Feature 2",
+      "controller": "key_feature_2"
+    },
+    {
+      "fieldType": "input",
+      "label": "Key Feature 3",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Key Feature 3",
+      "controller": "key_feature_3"
+    },
+    {
+      "fieldType": "input",
+      "label": "Shipping Info Length",
+      "type": "number",
+      "value": 30,
+      "min": 0,
+      "placeholder": "Shipping Info Length",
+      "controller": "shipping_info_length"
+    },
+    {
+      "fieldType": "input",
+      "label": "Shipping Info Width",
+      "type": "number",
+      "value": 30,
+      "min": 0,
+      "placeholder": "Shipping Info Width",
+      "controller": "shipping_info_width"
+    },
+    {
+      "fieldType": "input",
+      "label": "Shipping Info Height",
+      "type": "number",
+      "value": 30,
+      "min": 0,
+      "placeholder": "Shipping Info Height",
+      "controller": "shipping_info_height"
+    },
+    {
+      "fieldType": "input",
+      "label": "Shipping Info Weight",
+      "type": "number",
+      "value": 30,
+      "min": 0,
+      "placeholder": "Shipping Info Weight",
+      "controller": "shipping_info_weight"
+    },
+    {
+      "fieldType": "input",
+      "label": "Return Days",
+      "type": "number",
+      "value": 10,
+      "min": 0,
+      "placeholder": "Return Days",
+      "controller": "return_days"
+    },
+    {
+      "fieldType": "input",
+      "label": "Created By",
+      "type": "text",
+      "hidden": "true",
+      "value": "admin",
+      "placeholder": "Created By",
+      "controller": "created_by"
+    },
+    {
+      "fieldType": "input",
+      "label": "Updated By",
+      "type": "text",
+      "hidden": "true",
+      "value": "admin",
+      "placeholder": "Updated By",
+      "controller": "updated_by"
+    }
+  ],
+  "category-form": [
+    {
+      "fieldType": "input",
+      "label": "Category Name",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Category Name",
+      "controller": "category_name"
+    },
+    {
+      "fieldType": "input",
+      "label": "Category ID",
+      "type": "number",
+      "hidden": "true",
+      "value": 0,
+      "placeholder": "Category ID",
+      "controller": "category_id"
+    },
+    {
+      "fieldType": "input",
+      "label": "Created By",
+      "type": "text",
+      "hidden": "true",
+      "value": "admin",
+      "placeholder": "Created By",
+      "controller": "created_by"
+    },
+    {
+      "fieldType": "input",
+      "label": "Updated By",
+      "type": "text",
+      "hidden": "true",
+      "value": "admin",
+      "placeholder": "Updated By",
+      "controller": "updated_by"
+    }
+  ],
+  "vendor-form": [
+    {
+      "fieldType": "input",
+      "label": "Vendor Name",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Vendor Name",
+      "controller": "vendor_name"
+    },
+    {
+      "fieldType": "input",
+      "label": "Vendor ID",
+      "type": "number",
+      "hidden": "true",
+      "value": 0,
+      "placeholder": "Vendor ID",
+      "controller": "vendor_id"
+    },
+    {
+      "fieldType": "input",
+      "label": "Vendor Company Name",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Vendor Company Name",
+      "controller": "vendor_company_name"
+    },
+    {
+      "fieldType": "input",
+      "label": "Vendor Email",
+      "type": "email",
+      "value": "value@test.com",
+      "placeholder": "Vendor Email",
+      "controller": "vendor_email"
+    },
+    {
+      "fieldType": "input",
+      "label": "Vendor Mobile",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "placeholder": "Vendor Mobile",
+      "controller": "vendor_mobile"
+    },
+    {
+      "fieldType": "textarea",
+      "label": "Vendor Address",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Vendor Address",
+      "controller": "vendor_address"
+    },
+    {
+      "fieldType": "input",
+      "label": "Vendor Country",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Vendor Country",
+      "controller": "vendor_country"
+    },
+    {
+      "fieldType": "input",
+      "label": "Vendor City",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Vendor City",
+      "controller": "vendor_city"
+    },
+    {
+      "fieldType": "input",
+      "label": "Vendor Pincode",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "placeholder": "Vendor Pincode",
+      "controller": "vendor_pincode"
+    },
+    {
+      "fieldType": "input",
+      "label": "Vendor State",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Vendor State",
+      "controller": "vendor_state"
+    },
+    {
+      "fieldType": "textarea",
+      "label": "Vendor Landmark",
+      "type": "text",
+      "value": "value",
+      "placeholder": "Vendor Landmark",
+      "controller": "vendor_landmark"
+    },
+    {
+      "fieldType": "input",
+      "label": "Created By",
+      "type": "text",
+      "hidden": "true",
+      "value": "admin",
+      "placeholder": "Created By",
+      "controller": "created_by"
+    },
+    {
+      "fieldType": "input",
+      "label": "Updated By",
+      "type": "text",
+      "hidden": "true",
+      "value": "admin",
+      "placeholder": "Updated By",
+      "controller": "updated_by"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

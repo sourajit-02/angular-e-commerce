@@ -1,0 +1,33 @@
+<div class="checkout-wrapper">
+  <div class="container">
+    <div class="block-header-body">
+      <h1 class="block-header-title">Checkout</h1>
+    </div>
+  </div>
+  <div class="container container-max-width">
+    <div class="row">
+      <div class="col-12 col-lg-6 col-xl-7">
+        <app-checkout-user-form #form> </app-checkout-user-form>
+      </div>
+      <div class="col-12 col-lg-6 col-xl-5 mt-4 mt-lg-0">
+        <div class="order-wrapper">
+          <mat-card class="order-card">
+            <app-checkout-order #order></app-checkout-order>
+            <ng-container
+              *ngIf="order?.cartItems && order?.cartItems.length !== 0"
+            >
+              <button
+                type="submit"
+                (click)="onSubmit(form)"
+                class="btn btn-primary btn-xl btn-block"
+              >
+                Place Order
+              </button>
+            </ng-container>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block-space-end"></div>
+</div>

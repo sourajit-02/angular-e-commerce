@@ -1,0 +1,58 @@
+.spec {
+  padding: 1em;
+  color: #262626;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.spec-section+.spec-section,
+.spec-disclaimer {
+  margin-top: 2.86em;
+}
+
+.spec-section-title {
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: -.03em;
+  margin: 0 0 12px;
+}
+
+.spec-section-title,
+.spec-disclaimer {
+  line-height: 20px;
+}
+
+.spec-row {
+  padding: .575em 0;
+  display: flex;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.spec-row:first-of-type {
+  border-top: 1px solid #ebebeb;
+}
+
+.spec-name {
+  padding-right: 2.15em;
+  width: 6em;
+  flex-shrink: 0;
+}
+
+.spec-name,
+.spec-disclaimer {
+  color: #6c757d;
+}
+
+.spec-disclaimer {
+  font-size: 13px;
+}
+
+@media (min-width: 430px) {
+  .spec {
+    padding: 2.3em;
+  }
+
+  .spec-name {
+    width: 14.3em;
+  }
+}

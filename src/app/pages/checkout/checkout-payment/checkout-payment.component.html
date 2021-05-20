@@ -1,0 +1,31 @@
+<div class="checkout-payment-methods payment-methods">
+  <ul class="payment-methods-list">
+    <ng-container *ngFor="let method of paymentMethods">
+      <li [id]="method.value" class="payment-methods-item">
+        <label class="payment-methods-item-header">
+          <div class="payment-methods-item-radio input-radio">
+            <span class="input-radio-body">
+              <input
+                [value]="method.value"
+                type="radio"
+                class="input-radio-input"
+                name="payment-radio-buttons"
+                (change)="checked($event)"
+                [checked]="method.checked"
+              />
+              <span class="input-radio-circle"> </span>
+            </span>
+          </div>
+          <span class="payment-methods-item-title">
+            {{ method.method }}
+          </span>
+        </label>
+        <div class="payment-methods-item-container">
+          <div class="payment-methods-item-details text-muted">
+            {{ method.content }}
+          </div>
+        </div>
+      </li>
+    </ng-container>
+  </ul>
+</div>

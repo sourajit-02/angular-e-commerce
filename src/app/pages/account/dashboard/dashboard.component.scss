@@ -1,0 +1,180 @@
+* {
+  font-family: Roboto, "sans-serif" !important;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 9%);
+  border: none;
+  border-radius: 0;
+}
+
+.profile-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+
+  img {
+    border-radius: 50%;
+    max-width: 100%;
+  }
+}
+
+.profile-name {
+  font-weight: 500;
+  line-height: 20px
+}
+
+.profile-email {
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.button {
+  height: 30px;
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+  background: #f0f0f0;
+  border-radius: 2px;
+  transition: all 0.15s ease-in-out;
+}
+
+.button-text {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  color: #333;
+  font-weight: 500;
+  font-family: Roboto, "sans-serif" !important;
+}
+
+button:hover {
+  background: #e5e5e5;
+}
+
+.address-card {
+  padding: 2em;
+  width: 100%;
+}
+
+.badge {
+  position: absolute;
+  transform: skewX(-20deg);
+  background: #e52727;
+  border-radius: 2.5px;
+  padding: 4px 14px 0;
+  right: 14px;
+  top: 12px;
+  height: 1em;
+  width: 2em;
+}
+
+.badge-text {
+  z-index: 1;
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 500;
+  color: #fff;
+  right: 20px;
+  top: 15.5px;
+}
+
+.address-name {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 1.125em
+}
+
+.address-row {
+  font-size: 15px;
+}
+
+.address-row+.address-row {
+  margin-top: .8em;
+}
+
+.address {
+  display: flex;
+  flex-wrap: wrap;
+  width: 63%;
+}
+
+.address-row-title {
+  font-size: 13px;
+  color: #6c757d;
+}
+
+.footer {
+  margin-top: 1.73333em !important;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.orders-wrapper {
+  margin-top: 1.5em;
+  width: 100%;
+}
+
+.header {
+  padding: 1em 1.2em;
+  font-size: 1.25em;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.orders-table {
+  width: 100%;
+  min-width: 500px;
+}
+
+th {
+  color: #262626;
+  font-size: 13px;
+}
+
+td {
+  font-size: 15px;
+}
+
+@media (min-width: 800px) {
+  .dashboard {
+    flex-direction: row;
+    align-items: initial;
+  }
+
+  .card-wrapper {
+    width: calc(50% - .75em);
+  }
+}

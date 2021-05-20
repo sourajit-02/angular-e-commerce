@@ -1,0 +1,140 @@
+.product-reviews {
+  padding: .25em;
+}
+
+.reviews-list-item {
+  height: auto !important;
+  color: #262626;
+}
+
+.reviews-list-item+.reviews-list-item,
+mat-paginator {
+  margin-top: 1.125em;
+  padding-top: 1.5em;
+  border-top: 1px solid #ebebeb;
+}
+
+.review-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.review-avatar {
+  overflow: hidden;
+  border-radius: 1.5px;
+  width: 42px;
+  margin-right: .75em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.review-meta {
+  flex-grow: 1;
+  margin-right: 1.25em;
+}
+
+.review-author {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.review-date {
+  font-size: 13px;
+  color: #999;
+}
+
+mat-icon {
+  color: #ffd333;
+  font-size: 18px;
+  width: 1em;
+  height: 1em;
+  display: inline-flex;
+  align-items: center;
+}
+
+.review-content {
+  width: 100%;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: .8em;
+}
+
+.reviews-form {
+  margin-top: .5em;
+}
+
+.reviews-form-header {
+  margin: 0 0 1em;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.review-textbox {
+  margin-left: -5px;
+}
+
+mat-form-field {
+  padding: 0 5px;
+  margin: 0;
+}
+
+mat-select {
+  width: 95%;
+}
+
+.review-textarea {
+  width: 67.5%;
+}
+
+textarea {
+  height: 5.5em;
+}
+
+.review-submit {
+  margin-top: 1.5em;
+}
+
+@media(min-width:280px) {
+  mat-form-field {
+    margin: 0 0 1em;
+  }
+
+  mat-select {
+    width: 100%;
+  }
+}
+
+@media (min-width: 430px) {
+  .product-reviews {
+    padding: .5em;
+  }
+
+  .review-content {
+    font-size: 15px;
+  }
+
+  .reviews-form {
+    margin-top: 1em;
+  }
+
+  .reviews-form-header {
+    font-size: 1.75em;
+  }
+}
+
+@media (min-width: 500px) {
+  .product-reviews {
+    padding: 2em;
+  }
+
+  .reviews-form {
+    margin-top: 3em;
+  }
+}

@@ -1,0 +1,141 @@
+<mat-card class="product-info-card">
+  <div class="product-info">
+    <div class="product-info-body">
+      <div class="product-info-body-header flex-center">
+        <div class="product-price text-color">
+          {{ productDetails.product_price | currency: "USD" }}
+        </div>
+        <div class="status-badge font-thirteen">in stock</div>
+      </div>
+      <mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="Name">
+          <mat-cell *matCellDef="let element" class="text-color name-cell">
+            {{ element.name }}
+          </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Value">
+          <mat-cell *matCellDef="let element" class="text-color value-cell">
+            {{ element.value }}
+          </mat-cell>
+        </ng-container>
+
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      </mat-table>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div class="product-form">
+      <div class="product-form-row">
+        <div class="product-form-title font-eleven">Material</div>
+        <div class="product-form-control">
+          <mat-button-toggle-group
+            name="material"
+            aria-label="Various Materials"
+          >
+            <mat-button-toggle
+              value="steel"
+              class="radio-label flex-center font-thirteen"
+            >
+              Steel
+            </mat-button-toggle>
+            <mat-button-toggle
+              value="aluminium"
+              class="radio-label flex-center font-thirteen"
+            >
+              Aluminium
+            </mat-button-toggle>
+            <mat-button-toggle
+              value="thorium"
+              class="radio-label flex-center font-thirteen"
+            >
+              Thorium
+            </mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+      </div>
+      <div class="product-form-row">
+        <div class="product-form-title font-eleven">Color</div>
+        <div class="product-form-control">
+          <form [formGroup]="colorsForm">
+            <label>
+              <input type="radio" id="white" name="color" value="white" />
+              <span></span>
+            </label>
+            <label>
+              <input type="radio" id="yellow" name="color" value="yellow" />
+              <span></span>
+            </label>
+            <label>
+              <input type="radio" id="red" name="color" value="red" />
+              <span></span>
+            </label>
+            <label>
+              <input type="radio" id="blue" name="color" value="blue" />
+              <span></span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+
+    <div class="product-actions flex">
+      <div class="quantity-wrapper">
+        <div class="quantity flex-center text-color">
+          <button
+            class="quantity-change"
+            mat-flat-button
+            (click)="decrease(productDetails)"
+          >
+            -
+          </button>
+          <span *ngIf="cartItem">
+            {{ cartItem.productQty }}
+          </span>
+          <span *ngIf="!cartItem">0</span>
+          <button class="quantity-change" mat-flat-button (click)="increase()">
+            +
+          </button>
+        </div>
+      </div>
+      <div class="add-to-cart">
+        <button class="button" mat-flat-button (click)="handleAddToCart()">
+          Add To Cart
+        </button>
+      </div>
+      <button mat-button class="add-to-wishlist flex font-thirteen text-color">
+        <mat-icon class="button-icon font-thirteen" aria-label="favourite icon">
+          favorite
+        </mat-icon>
+        <span>Add to wishlist</span>
+      </button>
+      <button mat-button class="add-to-compare flex font-thirteen text-color">
+        <mat-icon class="button-icon font-thirteen" aria-label="favourite icon">
+          leaderboard
+        </mat-icon>
+        <span>Add to compare</span>
+      </button>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div class="tags-and-share-links">
+      <div class="tags-list flex font-thirteen">
+        <span>Brake Kit</span>
+        <span>Brandix</span>
+        <span>Filter</span>
+        <span>Bumper</span>
+        <span>Transmission</span>
+        <span>Hood</span>
+      </div>
+      <div class="share-links-list font-eleven">
+        <span class="like">Like</span>
+        <span class="tweet">Tweet</span>
+        <span class="pin-it">Pin It</span>
+        <span class="like-counter">4K</span>
+      </div>
+    </div>
+  </div>
+</mat-card>

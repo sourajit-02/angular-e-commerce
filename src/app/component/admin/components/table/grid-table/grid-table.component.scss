@@ -1,0 +1,32 @@
+.table-wrapper {
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+}
+
+.table-container {
+  overflow: auto;
+}
+
+th {
+  color: #515365;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.table-cell-content .active {
+  border: 1px solid transparent;
+  padding: 4px 10px;
+  color: #576775;
+  box-shadow: 0px 4px 10px rgb(76 175 80 / 25%);
+  border-radius: 22px;
+  background-color: rgba(76, 175, 80, 0.26);
+  border-color: rgba(76, 175, 80, 0.26);
+}
+
+.actions {
+  display: flex;
+}

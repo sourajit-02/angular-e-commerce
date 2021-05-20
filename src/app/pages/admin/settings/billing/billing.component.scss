@@ -1,0 +1,100 @@
+h4 {
+  padding: 1em 1em 0;
+  font-size: 22px;
+}
+
+.billing-wrapper {
+  padding: 1em;
+}
+
+.billing-menu,
+.billing-content {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.billing-menu {
+  margin-bottom: 1em;
+}
+
+.billing-card {
+  margin-bottom: 1em;
+}
+
+mat-card {
+  border-radius: 22px;
+}
+
+.header-wrapper {
+  display: flex;
+  padding-bottom: 1em;
+}
+
+.header {
+  padding-left: 1.25em;
+}
+
+mat-icon {
+  font-size: 30px;
+  padding-top: .35em;
+}
+
+.card-icon {
+  color: #7774e7;
+}
+
+.file-icon {
+  color: #37c936;
+}
+
+h5 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #212b36;
+}
+
+p {
+  font-size: 14px;
+  color: #637380;
+}
+
+.content {
+  margin-top: 2em;
+  text-align: end;
+}
+
+.text {
+  font-size: 14px;
+  text-align: center;
+  color: #888da8;
+}
+
+.button {
+  color: white;
+  background: #0f9aee;
+  border-radius: 2em;
+  margin-top: .375em;
+}
+
+@media (min-width: 780px) {
+  .billing-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .billing-menu,
+  .billing-content {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .billing-menu {
+    margin-right: 1em;
+  }
+
+  .billing-content {
+    width: 75%;
+  }
+}

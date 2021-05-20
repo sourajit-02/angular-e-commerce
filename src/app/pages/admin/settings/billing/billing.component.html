@@ -1,0 +1,60 @@
+<h4>Billing</h4>
+<div class="billing-wrapper">
+  <div class="billing-menu">
+    <mat-card class="billing-card">
+      <div class="header-wrapper">
+        <mat-icon class="card-icon">credit_card</mat-icon>
+        <div class="header">
+          <h5>Billing Information</h5>
+          <p>Update your billing information</p>
+        </div>
+      </div>
+    </mat-card>
+    <mat-card>
+      <div class="header-wrapper">
+        <mat-icon class="file-icon"> insert_drive_file </mat-icon>
+        <div class="header">
+          <h5>Invoice</h5>
+          <p>View your invoices</p>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  <div class="billing-content">
+    <mat-card class="billing-card">
+      <div class="header-wrapper">
+        <mat-icon class="card-icon">credit_card</mat-icon>
+        <div class="header">
+          <h5>Billing Information</h5>
+          <p>Update your billing information</p>
+        </div>
+      </div>
+      <div class="content">
+        <div class="text">You does not set card details yet</div>
+        <button mat-flat-button (click)="openDialog('Add', {})" class="button">
+          Add Card Details
+        </button>
+      </div>
+    </mat-card>
+    <mat-card>
+      <div class="header-wrapper">
+        <mat-icon class="file-icon"> insert_drive_file </mat-icon>
+        <div class="header">
+          <h5>Invoice</h5>
+          <p>
+            Access your store’s account summary and review your monthly
+            invoices.
+          </p>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <app-table
+        [pagination]="true"
+        [displayedColumns]="displayedColumns"
+        [tableData]="dataSource"
+        [paginationData]="paginationData"
+      >
+      </app-table>
+    </mat-card>
+  </div>
+</div>

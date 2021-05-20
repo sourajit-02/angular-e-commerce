@@ -1,0 +1,86 @@
+<div [formGroup]="shippingForm" #form="ngForm" class="form-group d-block">
+  <ng-container *ngFor="let data of shippingFieldData">
+    <ng-container
+      *ngIf="
+        data.controller === 'shipping_first_name' ||
+        data.controller === 'shipping_email'
+      "
+    >
+      <div class="form-row">
+        <ng-container *ngIf="data.controller === 'shipping_first_name'">
+          <div class="form-group col-md-6">
+            <label for="shipping_first_name"> First Name </label>
+            <input
+              formControlName="shipping_first_name"
+              type="text"
+              class="form-control"
+              id="shipping_first_name"
+              placeholder="Mark"
+            />
+            <div class="invalid-feedback"></div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="shipping_last_name"> Last Name </label>
+            <input
+              formControlName="shipping_last_name"
+              type="text"
+              class="form-control"
+              id="shipping_last_name"
+              placeholder="Twain"
+            />
+            <div class="invalid-feedback"></div>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="data.controller === 'shipping_email'">
+          <div class="form-group col-md-6 mb-0">
+            <label for="shipping_email"> Email address </label>
+            <input
+              formControlName="shipping_email"
+              type="email"
+              class="form-control"
+              id="shipping_email"
+              placeholder="user@example.com"
+            />
+            <div class="invalid-feedback"></div>
+          </div>
+          <div class="form-group col-md-6 mb-0">
+            <label for="shipping_phone"> Phone Number </label>
+            <input
+              formControlName="shipping_phone"
+              type="text"
+              class="form-control"
+              id="shipping_phone"
+              placeholder="+1 999 888 7777"
+            />
+            <div class="invalid-feedback"></div>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+    <ng-container
+      *ngIf="
+        data.controller !== 'shipping_first_name' &&
+        data.controller !== 'shipping_last_name' &&
+        data.controller !== 'shipping_email' &&
+        data.controller !== 'shipping_phone'
+      "
+    >
+      <div class="form-group">
+        <ng-container *ngIf="data.label">
+          <label [for]="'shipping_' + data.controller">
+            {{ data.label }}
+            <ng-container *ngIf="data.optional === true">
+              <span class="text-muted">(Optional)</span>
+            </ng-container>
+          </label>
+        </ng-container>
+        <input
+          [type]="data.type"
+          class="form-control"
+          [id]="'shipping_' + data.controller"
+          [placeholder]="data.placeholder"
+        />
+      </div>
+    </ng-container>
+  </ng-container>
+</div>

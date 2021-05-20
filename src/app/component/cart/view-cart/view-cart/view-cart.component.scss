@@ -1,0 +1,290 @@
+* {
+  color: #262626;
+  font-family: "Roboto", "sans-serif";
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-cart-wrapper {
+  background: #fafafa;
+  padding: 2em;
+}
+
+h1 {
+  font-family: "Roboto", "sans-serif";
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.cart-content-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+.order-table {
+  padding: 3em 2em 0;
+}
+
+mat-table {
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+  flex: 0 0 66.666667%;
+  width: 100%;
+}
+
+mat-header-cell {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+mat-table {
+  overflow: auto;
+}
+
+mat-header-row,
+mat-row {
+  width: 500px;
+}
+
+mat-row {
+  padding-bottom: 1em;
+}
+
+.show-web {
+  display: none;
+}
+
+.cell-align {
+  justify-content: center;
+}
+
+.column-total {
+  flex: 0.5434;
+  padding-right: 16px;
+}
+
+.column-remove {
+  width: 1px;
+  white-space: nowrap;
+  padding-left: 0;
+}
+
+.remove-button {
+  border: none;
+  border-radius: 2px;
+  font-weight: 500;
+  font-size: .875rem;
+  line-height: 1.5;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  border-color: #fff;
+  background: #fff;
+  fill: #ccc;
+  padding: 0;
+}
+
+.shrink {
+  flex: 0.092;
+}
+
+.total-card-wrapper {
+  padding: 3em 2em 0;
+}
+
+.total-card {
+  padding: 1em;
+}
+
+.header {
+  box-shadow: none;
+  border-bottom: 1px solid #ebebeb;
+  padding: 0 0 1em;
+}
+
+.mat-card-title {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: none;
+}
+
+.shipping-card {
+  box-shadow: none;
+  text-align: end;
+  padding: 0;
+  margin: 0 0 .5em;
+}
+
+.card2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.card2 .mat-card-subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+.card .mat-card-subtitle {
+  margin-top: 0;
+  padding: 0 1em 0 0;
+}
+
+.total-content-wrapper {
+  padding: 2em 0 0;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.total-content .card {
+  padding: 0;
+}
+
+.total-content,
+.button-wrapper {
+  flex: 0 0 50%;
+}
+
+.total-title {
+  font-weight: 500;
+  margin: 0 0 .5em;
+}
+
+.link a {
+  font-weight: 400;
+  color: #007bff;
+  padding: 0 1em;
+}
+
+.red-button {
+  cursor: pointer;
+  border-color: #e52727;
+  background: #e52727;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  fill: currentColor;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  padding: .75em;
+}
+
+.button-wrapper {
+  text-align: end;
+  padding-right: 14px;
+}
+
+.checkout {
+  width: 100%;
+  height: fit-content;
+}
+
+.quantity-wrapper {
+  width: 85px;
+}
+
+.quantity {
+  height: 42px;
+  background: #ebebeb;
+  justify-content: space-between;
+  color: #262626;
+}
+
+.quantity-change {
+  background: #ebebeb;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: .025em;
+  height: 42px;
+  min-width: 24px;
+  font-size: 18px;
+  opacity: .3;
+}
+
+.quantity-change:hover {
+  opacity: 1;
+}
+
+@media (min-width: 450px) {
+  .red-button {
+    font-size: 20px;
+    line-height: 26px;
+    padding: calc(34px / 2) 40px;
+  }
+}
+
+@media (min-width: 576px) {
+  .view-cart-wrapper {
+    padding: 4em;
+  }
+
+  mat-table {
+    overflow: initial;
+  }
+
+  mat-header-row,
+  mat-row {
+    width: initial;
+  }
+
+  .total-card {
+    padding: 2em;
+  }
+}
+
+@media (min-width: 768px) {
+  .total-content .card {
+    padding: .5em 0;
+  }
+}
+
+@media (min-width: 1146px) {
+  .total-content .card {
+    padding: 0;
+  }
+
+  .cell-align {
+    justify-content: flex-end;
+  }
+
+  .show-web {
+    display: flex;
+  }
+
+  .total-content-wrapper {
+    flex-direction: row-reverse;
+  }
+
+  .button-wrapper {
+    padding-right: 0;
+  }
+
+  .card2 {
+    padding: 0 0 0 1em;
+  }
+
+  .checkout {
+    width: 60%;
+  }
+}

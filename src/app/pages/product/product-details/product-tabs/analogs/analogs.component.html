@@ -1,0 +1,84 @@
+<div class="table">
+  <mat-table [dataSource]="dataSource" class="analogs-table">
+    <ng-container matColumnDef="Name">
+      <mat-header-cell
+        class="table-header primary font-thirteen"
+        *matHeaderCellDef
+      >
+        Name
+      </mat-header-cell>
+      <mat-cell class="border-left" *matCellDef="let element">
+        <div class="table-cell primary font-fifteen">
+          <span>
+            {{ element.name.productName }}
+          </span>
+          <span class="secondary font-thirteen">
+            {{ element.name.sku }}
+          </span>
+        </div>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Rating">
+      <mat-header-cell
+        class="table-header primary font-thirteen"
+        *matHeaderCellDef
+      >
+        Rating
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <div class="table-cell center primary font-fifteen">
+          <span>
+            <mat-icon *ngFor="let i of element.rating.filledStars">
+              star
+            </mat-icon>
+            <mat-icon *ngFor="let i of element.rating.outlinedStars">
+              star_outline
+            </mat-icon>
+          </span>
+          <span class="secondary font-thirteen">
+            {{ element.rating.reviews }} reviews
+          </span>
+        </div>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Brand">
+      <mat-header-cell
+        class="table-header primary font-thirteen"
+        *matHeaderCellDef
+      >
+        Brand
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <div class="table-cell primary font-fifteen">
+          <span>
+            {{ element.brand.brandName }}
+          </span>
+          <span class="secondary font-thirteen">
+            ({{ element.brand.location }})
+          </span>
+        </div>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Price">
+      <mat-header-cell
+        class="table-header primary font-thirteen"
+        *matHeaderCellDef
+      >
+        Price
+      </mat-header-cell>
+      <mat-cell
+        class="primary font-fifteen border-right"
+        font-fifteen
+        *matCellDef="let element"
+      >
+        {{ element.price | currency: "USD" }}
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+</div>

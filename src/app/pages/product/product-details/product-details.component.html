@@ -1,0 +1,29 @@
+<!-- <div class="block-split">
+  <div class="container">
+    <div class="block-split__row row no-gutters">
+
+    </div>
+  </div>
+</div> -->
+
+<mat-grid-list
+  *ngIf="productDetails"
+  class="product-details"
+  [cols]="colBreakpoint"
+  [rowHeight]="rowBreakpoint"
+  [gutterSize]="gutterBreakpoint"
+  (window:resize)="onResize($event)"
+>
+  <mat-grid-tile [rowspan]="rowspan" [colspan]="cardColspan">
+    <app-product-card [productDetails]="productDetails"></app-product-card>
+  </mat-grid-tile>
+  <mat-grid-tile [rowspan]="rowspan" [colspan]="infoColspan">
+    <app-product-info [productDetails]="productDetails"></app-product-info>
+  </mat-grid-tile>
+  <mat-grid-tile id="tabs" [rowspan]="tabsRowspan" [colspan]="tabsColspan">
+    <app-product-tabs [productDetails]="productDetails"></app-product-tabs>
+  </mat-grid-tile>
+  <!-- <mat-grid-tile rowspan="1.5" colspan="12">
+      <app-related-products></app-related-products>
+    </mat-grid-tile> -->
+</mat-grid-list>

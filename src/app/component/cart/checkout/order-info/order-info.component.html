@@ -1,0 +1,68 @@
+<div class="order-info-wrapper">
+  <div class="cart-list-wrapper" *ngIf="cartItems.length === 0" id="empty-cart">
+    Your cart is empty
+  </div>
+  <div class="cart-list-wrapper" *ngIf="cartItems.length > 0">
+    <mat-list role="list">
+      <mat-list-item
+        role="listitem"
+        *ngFor="let cartItem of cartItems"
+        class="cart-list-item"
+      >
+        <div class="cart-list-item-container">
+          <div class="product-thumbnail-wrapper">
+            <div
+              class="product-thumbnail-image"
+              style="
+                background-image: url('../../../../assets/item/item-08.jpg');
+              "
+            ></div>
+            <div class="product-qty-wrapper">
+              <span class="product-qty mac-font-family">
+                {{ cartItem.product_quantity }}
+              </span>
+            </div>
+          </div>
+          <div class="cart-item-details-wrapper">
+            <div class="product-name mac-font-family">
+              {{ cartItem.product_name }}
+            </div>
+          </div>
+          <div class="product-price-wrapper">
+            <span class="product-price mac-font-family">
+              {{ cartItem.product_price | currency: "USD" }}
+            </span>
+          </div>
+        </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item role="listitem">
+        <div id="order-summary">
+          <div id="sub-total-wrapper">
+            <p class="mac-font-family">Subtotal</p>
+            <p class="sub-total mac-font-family">
+              {{ cartTotal | currency: "USD" }}
+            </p>
+          </div>
+          <div id="shipping-charge-wrapper">
+            <p class="mac-font-family">Shipping</p>
+            <p class="shipping-charge mac-font-family">
+              Calculated at next step
+            </p>
+          </div>
+        </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item role="listitem">
+        <div id="total-wrapper">
+          <p id="total-text" class="mac-font-family">Total</p>
+          <p class="total">
+            <span class="price mac-font-family">
+              {{ cartTotal | currency: "USD" }}
+            </span>
+          </p>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>

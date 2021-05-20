@@ -1,0 +1,94 @@
+<section class="bg-banner">
+  <div class="container">
+    <div class="row">
+      <div class="banner-col">
+        <div class="image-wrapper">
+          <a routerLink="product">
+            <img [src]="list[0]" alt="banner-img" class="banner-img" />
+          </a>
+
+          <div class="banner-content">
+            <span class="text1"> The Beauty </span>
+
+            <h3 class="text2">Lookbook</h3>
+
+            <a routerLink="product" class="text3">View Collection</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="banner-col">
+        <div class="image-wrapper image2">
+          <a routerLink="product/1">
+            <img class="banner-img" [src]="list[1]" alt="banner-img" />
+          </a>
+          <div class="banner-content content2">
+            <div class="t-center">
+              <a routerLink="product/1" class="text4">
+                Boxy2 T-Shirt with Roll Sleeve
+              </a>
+
+              <span class="price-wrapper">
+                <span class="price">$20.00</span>
+              </span>
+            </div>
+            <div class="time-wrapper">
+              <div class="time-col">
+                <span class="text5" id="days">-846</span>
+                <span class="time-unit"> days </span>
+              </div>
+              <div class="time-col">
+                <span class="text5" id="hours">-18</span>
+                <span class="time-unit"> hrs </span>
+              </div>
+              <div class="time-col">
+                <span class="text5" id="minutes">-16</span>
+                <span class="time-unit"> mins </span>
+              </div>
+              <div class="time-col">
+                <span class="text5" id="seconds">-1</span>
+                <span class="time-unit"> secs </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script type="text/javascript">
+          // Set the date we're counting down to
+          var countDownDate = new Date("2019/01/01").getTime();
+
+          // Update the count down every 1 second
+          var x = setInterval(function () {
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor(
+              (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            );
+            var minutes = Math.floor(
+              (distance % (1000 * 60 * 60)) / (1000 * 60)
+            );
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            // If the count down is over, write some text
+            if (distance < 0) {
+              clearInterval(x);
+              document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+          }, 1000);
+        </script>
+      </div>
+    </div>
+  </div>
+</section>

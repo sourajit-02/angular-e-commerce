@@ -1,0 +1,150 @@
+<div class="new-address">
+  <div class="row">
+    <div class="card">
+      <mat-card class="card-header">
+        <h2>New Address</h2>
+      </mat-card>
+      <mat-card class="card-body">
+        <div class="form-container">
+          <form [formGroup]="addressForm" class="form">
+            <mat-label>{{ addBox.fname }}</mat-label>
+            <mat-form-field class="form-element" appearance="fill">
+              <input
+                type="name"
+                matInput
+                placeholder="Mark"
+                formControlName="fname"
+              />
+              <mat-error *ngIf="func['fname'].invalid">
+                {{ getError("fname") }}
+              </mat-error>
+            </mat-form-field>
+
+            <mat-label>{{ addBox.lname }}</mat-label>
+            <mat-form-field class="form-element" appearance="fill">
+              <input
+                type="name"
+                matInput
+                placeholder="Twain"
+                formControlName="lname"
+              />
+              <mat-error *ngIf="func['lname'].invalid">
+                {{ getError("lname") }}
+              </mat-error>
+            </mat-form-field>
+
+            <mat-label>{{ addBox.cname }}</mat-label>
+            <mat-form-field class="form-element" appearance="fill">
+              <input
+                type="name"
+                matInput
+                placeholder="Fashe"
+                formControlName="cname"
+              />
+            </mat-form-field>
+
+            <mat-label>{{ addBox.country }}</mat-label>
+            <mat-form-field class="form-element" appearance="fill">
+              <select matNativeControl required>
+                <option value="Ukraine"></option>
+                <option value="Australia"></option>
+                <option value="Germany"></option>
+                <option value="Random Fedration"></option>
+              </select>
+            </mat-form-field>
+
+            <mat-label>{{ addBox.street }}</mat-label>
+            <mat-form-field class="form-element" appearance="fill">
+              <input
+                type="name"
+                matInput
+                placeholder="Apartment,suite,unit,etc"
+                formControlName="street"
+              />
+              <mat-error *ngIf="func['street'].invalid">
+                {{ getError("street") }}
+              </mat-error>
+            </mat-form-field>
+
+            <mat-label>{{ addBox.city }}</mat-label>
+            <mat-form-field class="form-element" appearance="fill">
+              <input
+                type="name"
+                matInput
+                placeholder="Houston"
+                formControlName="city"
+              />
+              <mat-error *ngIf="func['city'].invalid">
+                {{ getError("city") }}
+              </mat-error>
+            </mat-form-field>
+
+            <mat-label>{{ addBox.state }}</mat-label>
+            <mat-form-field class="form-element" appearance="fill">
+              <input
+                type="name"
+                matInput
+                placeholder="Texas"
+                formControlName="state"
+              />
+              <mat-error *ngIf="func['state'].invalid">
+                {{ getError("state") }}
+              </mat-error>
+            </mat-form-field>
+
+            <mat-label>{{ addBox.postcode }}</mat-label>
+            <mat-form-field class="form-element" appearance="fill">
+              <input
+                type="number"
+                matInput
+                placeholder="19720"
+                formControlName="postcode"
+              />
+              <mat-error *ngIf="func['postcode'].invalid">
+                {{ getError("postcode") }}
+              </mat-error>
+            </mat-form-field>
+
+            <mat-label>{{ addBox.email }}</mat-label>
+            <mat-form-field class="form-element" appearance="fill">
+              <input
+                type="email"
+                matInput
+                placeholder="user@example.com"
+                formControlName="email"
+              />
+              <mat-error *ngIf="func['email'].invalid">
+                {{ getError("email") }}
+              </mat-error>
+            </mat-form-field>
+
+            <mat-label>{{ addBox.phone }}</mat-label>
+            <mat-form-field class="form-element" appearance="fill">
+              <input
+                type="number"
+                matInput
+                placeholder="+1 999 888 7777"
+                formControlName="phone"
+              />
+              <mat-error *ngIf="func['phone'].invalid">
+                {{ getError("phone") }}
+              </mat-error>
+            </mat-form-field>
+
+            <mat-checkbox>Set as my default address</mat-checkbox>
+            <br /><br /><br />
+            <button
+              mat-flat-button
+              type="submit"
+              class="button button-m"
+              [disabled]="addressForm.invalid"
+              ng-click="turnBlack()"
+            >
+              {{ addBox.button }}
+            </button>
+          </form>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+  height: 100vh;
+}
+
+.card {
+  padding: 1em;
+  width: max-content;
+  margin: 4em auto 3em;
+}
+
+.form-container {
+  padding: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+  padding-left: 0;
+  padding-bottom: 8px;
+  margin: 10px 32px 0 10px;
+}
+
+.form-element {
+  padding: 5px 0px 0px 2px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.button {
+  background: #292929;
+  padding: 0px 40px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: .025em;
+  border-radius: 0;
+  height: 44px;
+}
+
+.forgot-pass {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.checkbox {
+  padding: 1em 0;
+}
+
+@media (min-width: 480px) {
+  .form {
+    width: 400px;
+  }
+
+  .login-button-wrapper {
+    flex-wrap: nowrap;
+
+    .checkbox {
+      padding: 0;
+    }
+  }
+}

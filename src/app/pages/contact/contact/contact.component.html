@@ -1,0 +1,32 @@
+  <app-titlebar
+    class="title-img"
+    [style.background-image]="'url(' + titleImg + ')'"
+    [titleText]="titleText"
+  ></app-titlebar>
+  <div class="content-wrapper">
+    <div class="content">
+      <div class="map">
+        <iframe
+          width="550"
+          height="450"
+          frameborder="0"
+          style="border: 0"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAc9dls1wpWXbntq2UqGXaX2hnSIUjm_wU&q=Space+Needle,Seattle+WA"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+      <div class="form-wrapper">
+        <h4>Send us your message</h4>
+        <div class="form">
+          <form>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input placeholder="Phone" />
+            <textarea placeholder="Message"></textarea>
+          </form>
+        </div>
+        <button>Send</button>
+      </div>
+    </div>
+  </div>

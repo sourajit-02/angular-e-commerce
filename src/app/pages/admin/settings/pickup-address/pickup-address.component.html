@@ -1,0 +1,13 @@
+<div class="header-wrapper">
+  <h5>Pickup Address</h5>
+  <button mat-flat-button (click)="openDialog('Add', {})" class="button">
+    Add Pickup Address
+  </button>
+</div>
+<app-table
+  [pagination]="true"
+  [displayedColumns]="displayedColumns"
+  [tableData]="dataSource"
+  [paginationData]="paginationData"
+>
+</app-table>

@@ -1,0 +1,24 @@
+<mat-card class="card">
+  <h4 class="nav-title">Navigation</h4>
+  <ul class="nav-list">
+    <li routerLinkActive="nav-item-active" class="nav-item">
+      <a routerLink="dashboard">Dashboard</a>
+    </li>
+    <li routerLinkActive="nav-item-active" class="nav-item">
+      <a routerLink="edit-profile">Edit Profile</a>
+    </li>
+    <li routerLinkActive="nav-item-active" class="nav-item">
+      <a routerLink="order-history">Order History</a>
+    </li>
+    <li routerLinkActive="nav-item-active" class="nav-item">
+      <a routerLink="addresses">Addresses</a>
+    </li>
+    <li routerLinkActive="nav-item-active" class="nav-item">
+      <a routerLink="password">Password</a>
+    </li>
+    <mat-divider></mat-divider>
+    <li class="nav-item">
+      <a (click)="onLogout()">Logout</a>
+    </li>
+  </ul>
+</mat-card>

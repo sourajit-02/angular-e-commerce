@@ -1,0 +1,102 @@
+<!-- (onLazyLoad)="loadTable($event)" -->
+<!-- [lazy]="true" -->
+<!-- [scrollable]="true"
+[style]="{ width: '800px' }"
+scrollHeight="400px" -->
+<!-- <ng-template pTemplate="colgroup" let-columns>
+  <colgroup>
+    <ng-template *ngFor="let col of objectKeys(columns)"></ng-template>
+    <col style="width: 150px" />
+  </colgroup>
+</ng-template> -->
+<p-table
+  #dt1
+  [columns]="displayedColumns"
+  [value]="tableData"
+  [loading]="loading"
+  [paginator]="true"
+  [rows]="rows"
+  [rowsPerPageOptions]="[5, 10, 25, 50]"
+  styleClass="p-datatable-gridlines p-datatable-responsive-demo"
+  [globalFilterFields]="objectKeys(displayedColumns)"
+  [showCurrentPageReport]="true"
+  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+>
+  <ng-template pTemplate="caption">
+    <div class="p-d-flex">
+      <button
+        pButton
+        label="Clear"
+        class="p-button-outlined"
+        icon="pi pi-filter-slash"
+        (click)="clear(dt1)"
+      ></button>
+      <span class="p-input-icon-left p-ml-auto">
+        <i class="pi pi-search"></i>
+        <input
+          pInputText
+          type="text"
+          (input)="dt1.filterGlobal($event.target.value, 'contains')"
+          placeholder="Search keyword"
+        />
+      </span>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th *ngFor="let col of objectKeys(columns)">
+        <div class="headers">
+          {{ columns[col] }}
+          <p-columnFilter type="text" [field]="col" display="menu">
+          </p-columnFilter>
+        </div>
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr>
+      <td *ngFor="let col of objectKeys(columns)">
+        <span class="p-column-title">{{ columns[col] }}</span>
+        <ng-container *ngIf="col === 'is_active'">
+          <ng-container *ngIf="rowData[col] === 1">
+            <div class="table-cell status">
+              <span ngClass="active"> Active </span>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="rowData[col] === 0">
+            <div class="table-cell status">
+              <span ngClass="inactive"> Inactive </span>
+            </div>
+          </ng-container>
+        </ng-container>
+        <ng-container *ngIf="col === 'actions'">
+          <div class="table-cell actions">
+            <button
+              pButton
+              pRipple
+              type="button"
+              icon="pi pi-pencil"
+              (click)="
+                emitRowAction({ data: rowData, action: rowData[col][0] })
+              "
+              class="p-button-rounded p-button-text"
+            ></button>
+            <button
+              pButton
+              pRipple
+              type="button"
+              icon="pi pi-trash"
+              (click)="
+                emitRowAction({ data: rowData, action: rowData[col][1] })
+              "
+              class="p-button-rounded p-button-text"
+            ></button>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="col !== 'is_active' && col !== 'actions'">
+          <div class="table-cell" [innerHtml]="rowData[col]"></div>
+        </ng-container>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

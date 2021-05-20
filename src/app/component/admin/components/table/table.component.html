@@ -1,0 +1,21 @@
+<ng-container *ngIf="tableType === 'grid'">
+  <app-grid-table
+    [filter]="filter"
+    [pagination]="pagination"
+    [displayedColumns]="displayedColumns"
+    [tableData]="tableData"
+    [paginationData]="paginationData"
+    (action)="emitRowAction($event)"
+  >
+  </app-grid-table>
+</ng-container>
+<ng-container *ngIf="tableType === 'flex'">
+  <app-flex-table
+    [filter]="filter"
+    [pagination]="pagination"
+    [displayedColumns]="displayedColumns"
+    [tableData]="tableData"
+    [paginationData]="paginationData"
+  >
+  </app-flex-table>
+</ng-container>

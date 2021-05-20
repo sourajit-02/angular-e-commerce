@@ -1,0 +1,73 @@
+<div class="header-wrapicon">
+  <button
+    mat-icon-button
+    aria-label="Open cart button"
+    id="cart-button"
+    (click)="op.toggle($event)"
+  >
+    <img src="{{ headerIcon2 }}" alt="icon-header02" class="icon-header" />
+  </button>
+  <span class="cart-items-number">{{ cartItemsNumber }}</span>
+</div>
+<p-overlayPanel
+  id="cart"
+  #op
+  [dismissable]="true"
+  [showCloseIcon]="!(isWeb$ | async) ? true : false"
+  [showTransitionOptions]="'300ms'"
+  [hideTransitionOptions]="'300ms'"
+  [style]="{ width: '100vw' }"
+>
+  <ng-template pTemplate>
+    <div *ngIf="cartItems && cartItems.length === 0" id="empty-cart">
+      Your cart is empty
+    </div>
+    <div class="cart-menu-content" *ngIf="cartItems && cartItems.length > 0">
+      <div class="cart-list-wrapper">
+        <ul class="dropcart-list">
+          <ng-container *ngFor="let item of cartItems">
+            <li>
+              <app-cart-item [cartItem]="item"></app-cart-item>
+            </li>
+            <li role="presentation" class="dropcart-divider"></li>
+          </ng-container>
+        </ul>
+      </div>
+      <div class="dropcart-totals">
+        <table>
+          <tbody>
+            <tr>
+              <th>Subtotal</th>
+              <td>{{ cartTotal | currency }}</td>
+            </tr>
+            <tr>
+              <th>Shipping</th>
+              <td>{{ shipping | currency }}</td>
+            </tr>
+            <tr>
+              <th>Tax</th>
+              <td>{{ tax | currency }}</td>
+            </tr>
+            <tr>
+              <th>Total</th>
+              <td>{{ cartTotal + shipping + tax | currency }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="button-wrapper">
+        <button class="button" mat-flat-button routerLink="cart/view-cart">
+          View Cart
+        </button>
+        <button
+          class="button checkout"
+          [routerLink]="['checkout']"
+          mat-flat-button
+          routerLink="cart"
+        >
+          Checkout
+        </button>
+      </div>
+    </div>
+  </ng-template>
+</p-overlayPanel>

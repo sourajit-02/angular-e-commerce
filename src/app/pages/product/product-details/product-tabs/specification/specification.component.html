@@ -1,0 +1,21 @@
+<div class="spec">
+  <div class="spec-section">
+    <h4 class="spec-section-title">General</h4>
+    <div class="spec-row" *ngFor="let gSpec of generalSpec">
+      <div class="spec-name">{{ gSpec.name }}</div>
+      <div class="spec-value">{{ gSpec.value }}</div>
+    </div>
+  </div>
+  <div class="spec-section">
+    <h4 class="spec-section-title">Dimensions</h4>
+    <div class="spec-row" *ngFor="let dSpec of dimensionSpec">
+      <div class="spec-name">{{ dSpec.name }}</div>
+      <div class="spec-value">{{ dSpec.value }}</div>
+    </div>
+  </div>
+  <div class="spec-disclaimer">
+    Information on technical characteristics, the delivery set, the country of
+    manufacture and the appearance of the goods is for reference only and is
+    based on the latest information available at the time of publication.
+  </div>
+</div>

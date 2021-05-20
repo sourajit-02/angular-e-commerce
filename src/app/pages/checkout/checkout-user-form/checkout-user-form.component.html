@@ -1,0 +1,162 @@
+<div class="user-form-wrapper">
+  <mat-card class="user-form-card">
+    <div class="card-title-wrapper">
+      <h3 class="card-title">Billing Details</h3>
+      <div
+        [formGroup]="userForm"
+        #form="ngForm"
+        class="form-group d-block needs-validation"
+        novalidate
+      >
+        <ng-container *ngFor="let data of userFieldData">
+          <ng-container
+            *ngIf="
+              data.controller === 'user_first_name' ||
+              data.controller === 'user_email'
+            "
+          >
+            <div class="form-row">
+              <ng-container *ngIf="data.controller === 'user_first_name'">
+                <div class="form-group col-md-6">
+                  <label for="user_first_name"> First Name </label>
+                  <input
+                    formControlName="user_first_name"
+                    type="text"
+                    class="form-control ng-untouched ng-pristine ng-invalid"
+                    id="user_first_name"
+                    placeholder="Mark"
+                    [value]="userForm.value['user_first_name']"
+                  />
+                  <div class="invalid-feedback"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="user_last_name"> Last Name </label>
+                  <input
+                    formControlName="user_last_name"
+                    type="text"
+                    class="form-control ng-untouched ng-pristine ng-invalid"
+                    id="user_last_name"
+                    placeholder="Twain"
+                    [value]="userForm.value['user_last_name']"
+                  />
+                  <div class="invalid-feedback"></div>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="data.controller === 'user_email'">
+                <div class="form-group col-md-6 mb-0">
+                  <label for="user_email"> Email address </label>
+                  <input
+                    formControlName="user_email"
+                    type="email"
+                    class="form-control ng-untouched ng-pristine ng-invalid"
+                    id="user_email"
+                    placeholder="user@example.com"
+                    [value]="userForm.value['user_email']"
+                  />
+                  <div class="invalid-feedback"></div>
+                </div>
+                <div class="form-group col-md-6 mb-0">
+                  <label for="user_phone"> Phone Number </label>
+                  <input
+                    formControlName="user_phone"
+                    type="text"
+                    class="form-control ng-untouched ng-pristine ng-invalid"
+                    id="user_phone"
+                    placeholder="+1 999 888 7777"
+                    [value]="userForm.value['user_phone']"
+                  />
+                  <div class="invalid-feedback"></div>
+                </div>
+              </ng-container>
+            </div>
+          </ng-container>
+          <ng-container
+            *ngIf="
+              data.controller !== 'user_first_name' &&
+              data.controller !== 'user_last_name' &&
+              data.controller !== 'user_email' &&
+              data.controller !== 'user_phone'
+            "
+          >
+            <div class="form-group">
+              <ng-container *ngIf="data.label">
+                <label [for]="data.controller">
+                  {{ data.label }}
+                  <ng-container *ngIf="data.optional === true">
+                    <span class="text-muted">(Optional)</span>
+                  </ng-container>
+                </label>
+              </ng-container>
+              <ng-container *ngIf="data.fieldType === 'input'">
+                <input
+                  [type]="data.type"
+                  class="form-control ng-untouched ng-pristine ng-invalid"
+                  [id]="data.controller"
+                  [placeholder]="data.placeholder"
+                  [value]="userForm.value[data.controller]"
+                />
+              </ng-container>
+              <ng-container *ngIf="data.fieldType === 'select'">
+                <select
+                  class="form-control ng-untouched ng-pristine ng-invalid"
+                  [id]="data.controller"
+                  [(value)]="userForm.value[data.controller]"
+                >
+                  <option value="">Select a country...</option>
+                  <option
+                    *ngFor="let value of data.values"
+                    [value]="value.value"
+                  >
+                    {{ value.name }}
+                  </option>
+                </select>
+              </ng-container>
+              <div class="invalid-feedback"></div>
+            </div>
+          </ng-container>
+        </ng-container>
+      </div>
+      <div class="form-group">
+        <div class="form-check mt-1">
+          <div class="form-check-input input-check">
+            <span class="input-check-body">
+              <input
+                type="checkbox"
+                class="input-check-input"
+                id="app-checkbox-id-1"
+                (click)="openNewAddressForm($event)"
+              />
+              <span class="input-check-box"> </span>
+              <span class="input-check-icon">
+                <svg width="9px" height="7px">
+                  <path
+                    d="M9,1.395L3.46,7L0,3.5L1.383,2.095L3.46,4.2L7.617,0L9,1.395Z"
+                  ></path>
+                </svg>
+              </span>
+            </span>
+          </div>
+          <label class="form-check-label" for="app-checkbox-id-1">
+            Ship to a different address?
+          </label>
+        </div>
+        <div id="address2" class="collapse-area">
+          <div class="pt-2"></div>
+          <app-checkout-shipping-form #shipping></app-checkout-shipping-form>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="checkout-comment">
+          Order notes
+          <span class="text-muted"> (Optional) </span>
+        </label>
+        <textarea
+          id="checkout-comment"
+          rows="4"
+          class="form-control ng-untouched ng-pristine ng-invalid"
+        >
+        </textarea>
+      </div>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,95 @@
+<div class="leftbar">
+  <div class="leftbar-content">
+    <div class="leftbar-items">
+      <h4>Categories</h4>
+      <span class="example-list-section">
+        <ul class="leftbar-items-lists">
+          <li class="leftbar-items-list" *ngFor="let category of categories">
+            <a routerLink="{{ category.link }}" class="leftbar-items-links">{{
+              category.type
+            }}</a>
+          </li>
+        </ul>
+      </span>
+    </div>
+    <div class="leftbar-items">
+      <h4>Color</h4>
+      <form [formGroup]="colorsForm" #form1="ngForm">
+        <span class="example-list-section">
+          <ul class="leftbar-items-lists">
+            <li class="leftbar-items-list" *ngFor="let color of colors">
+              <mat-checkbox
+                formControlName="colors"
+                color="accent"
+                (change)="filterByColors($event, color.name)"
+              >
+                {{ color.name | uppercase }}
+              </mat-checkbox>
+            </li>
+          </ul>
+        </span>
+      </form>
+    </div>
+    <div class="leftbar-items">
+      <h4>Price</h4>
+      <form [formGroup]="pricesForm" #form2="ngForm">
+        <span class="example-list-section">
+          <ul class="leftbar-items-lists">
+            <li class="leftbar-items-list" *ngFor="let price of prices">
+              <mat-checkbox
+                (change)="filterByPrices($event, price.min, price.max)"
+                formControlName="prices"
+                color="accent"
+              >
+                {{ price.min }}-{{ price.max }}
+              </mat-checkbox>
+            </li>
+          </ul>
+        </span>
+      </form>
+    </div>
+    <div class="leftbar-items">
+      <h4>Size</h4>
+      <form [formGroup]="sizesForm" #form3="ngForm">
+        <span class="example-list-section">
+          <ul class="leftbar-items-lists">
+            <li class="leftbar-items-list" *ngFor="let size of sizes">
+              <mat-checkbox
+                (change)="filterBySizes($event, size.size)"
+                formControlName="sizes"
+                color="accent"
+              >
+                {{ size.size }}
+              </mat-checkbox>
+            </li>
+          </ul>
+        </span>
+      </form>
+    </div>
+    <div class="leftbar-items">
+      <form
+        [formGroup]="searchForm"
+        #form4="ngForm"
+        (ngSubmit)="onSearch()"
+        class="leftbar-form"
+      >
+        <mat-form-field class="leftbar-form-search">
+          <input
+            type="search"
+            matInput
+            placeholder="Search"
+            formControlName="search"
+          />
+          <mat-icon matSuffix>search</mat-icon>
+          <mat-error
+            *ngIf="
+              searchForm.get('search').hasError('required') && form4.submitted
+            "
+          >
+            {{ getError("search") }}
+          </mat-error>
+        </mat-form-field>
+      </form>
+    </div>
+  </div>
+</div>

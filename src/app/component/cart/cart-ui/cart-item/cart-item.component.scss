@@ -1,0 +1,152 @@
+* {
+  font-family: "Roboto", "sans-serif";
+}
+
+.dropcart-item {
+  display: flex;
+}
+
+.drpocart-item-image {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+
+  &:hover {
+    color: #007bff;
+    text-decoration: none;
+  }
+}
+
+.image-wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  border-style: none;
+}
+
+.dropcart-item-info {
+  padding: 4px 0 5px;
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.dropcart-item-name {
+  font-size: 15px;
+  line-height: 18px;
+
+  a {
+    color: #262626;
+    transition: color .2s;
+  }
+}
+
+.dropcart-item-meta {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.dropcart-item-quantity {
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+  height: 16px;
+  z-index: 0;
+  font-size: 11px;
+  padding: 1px 10.82352px 0;
+  padding-left: 6px;
+  margin-right: -2.82352px;
+  line-height: 1.5;
+}
+
+.dropcart-item-quantity:before {
+  position: absolute;
+  left: 0;
+  background: #e52727;
+  display: block;
+  content: "";
+  width: calc(100% - 5.82352px);
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  border-radius: 2.5px 3px;
+  transform: skewX(-20deg);
+  transform-origin: left bottom;
+}
+
+.dropcart-item-quantity:after {
+  position: absolute;
+  left: 0;
+  border-top-left-radius: 2.5px;
+  border-bottom-left-radius: 2.5px;
+  background: #e52727;
+  display: block;
+  content: "";
+  width: 8.32352px;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+}
+
+.dropcart-item-price {
+  color: #262626;
+  font-weight: 500;
+  position: relative;
+  height: 16px;
+  z-index: 0;
+  font-size: 11px;
+  padding: 1px 10.82352px 0;
+  line-height: 1.5;
+}
+
+.dropcart-item-price:before {
+  background: #ebebeb;
+  position: absolute;
+  display: block;
+  content: "";
+  width: calc(100% - 5.82352px);
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  border-radius: 2.5px 3px;
+  transform-origin: left bottom;
+  left: 0;
+  transform: skewX(-20deg);
+}
+
+.dropcart-item-remove {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  fill: currentColor;
+  background-color: #fff;
+  color: #ccc;
+}

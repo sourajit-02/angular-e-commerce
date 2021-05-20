@@ -1,0 +1,125 @@
+<div class="product-reviews">
+  <div class="reviews-list">
+    <mat-list role="list" class="reviews-list-content">
+      <mat-list-item role="listitem" class="reviews-list-item">
+        <div class="review">
+          <div class="review-body">
+            <div class="review-avatar">
+              <img
+                src="https://red-parts.angular.themeforest.scompiler.ru/themes/red/assets/images/avatars/avatar-1.jpg"
+                alt="Avatar"
+              />
+            </div>
+            <div class="review-meta">
+              <div class="review-author">Samantha Smith</div>
+              <div class="review-date">May 27, 2018</div>
+            </div>
+            <div class="review-rating">
+              <mat-icon *ngFor="let i of [1, 2, 3, 4]">star</mat-icon>
+              <mat-icon *ngFor="let i of [1]">star_outline</mat-icon>
+            </div>
+            <div class="review-content">
+              Phasellus id mattis nulla. Mauris velit nisi, imperdiet vitae
+              sodales in, maximus ut lectus. Vivamus commodo scelerisque lacus,
+              at porttitor dui iaculis id. Curabitur imperdiet ultrices
+              fermentum.
+            </div>
+          </div>
+        </div>
+      </mat-list-item>
+      <mat-list-item role="listitem" class="reviews-list-item">
+        <div class="review">
+          <div class="review-body">
+            <div class="review-avatar">
+              <img
+                src="https://red-parts.angular.themeforest.scompiler.ru/themes/red/assets/images/avatars/avatar-2.jpg"
+                alt="Avatar"
+              />
+            </div>
+            <div class="review-meta">
+              <div class="review-author">Adam Taylor</div>
+              <div class="review-date">Apr 12, 2018</div>
+            </div>
+            <div class="review-rating">
+              <mat-icon *ngFor="let i of [1, 2, 3]">star</mat-icon>
+              <mat-icon *ngFor="let i of [1, 2]">star_outline</mat-icon>
+            </div>
+            <div class="review-content">
+              Aenean non lorem nisl. Duis tempor sollicitudin orci, eget
+              tincidunt ex semper sit amet. Nullam neque justo, sodales congue
+              feugiat ac, facilisis a augue. Donec tempor sapien et fringilla
+              facilisis. Nam maximus consectetur diam. Nulla ut ex mollis,
+              volutpat tellus vitae, accumsan ligula.
+            </div>
+          </div>
+        </div>
+      </mat-list-item>
+      <mat-list-item role="listitem" class="reviews-list-item">
+        <div class="review">
+          <div class="review-body">
+            <div class="review-avatar">
+              <img
+                src="https://red-parts.angular.themeforest.scompiler.ru/themes/red/assets/images/avatars/avatar-3.jpg"
+                alt="Avatar"
+              />
+            </div>
+            <div class="review-meta">
+              <div class="review-author">Helena Garcia</div>
+              <div class="review-date">Jan 2, 2018</div>
+            </div>
+            <div class="review-rating">
+              <mat-icon *ngFor="let i of [1, 2, 3, 4, 5]">star</mat-icon>
+            </div>
+            <div class="review-content">
+              Phasellus id mattis nulla. Mauris velit nisi, imperdiet vitae
+              sodales in, maximus ut lectus. Vivamus commodo scelerisque lacus,
+              at porttitor dui iaculis id. Curabitur imperdiet ultrices
+              fermentum.
+            </div>
+          </div>
+        </div>
+      </mat-list-item>
+    </mat-list>
+    <mat-paginator
+      [length]="100"
+      [pageSize]="10"
+      [pageSizeOptions]="[5, 10, 25, 100]"
+    >
+    </mat-paginator>
+  </div>
+  <form class="reviews-form form-underline">
+    <h3 class="reviews-form-header">Write A Review</h3>
+    <div class="reviews-form-row">
+      <div class="review-textbox">
+        <mat-form-field appearance="fill">
+          <mat-label>Rating</mat-label>
+          <mat-select value="selectRating">
+            <mat-option value="selectRating">Select rating value</mat-option>
+            <mat-option value="fiveStar">5 stars rating</mat-option>
+            <mat-option value="fourStar">4 stars rating</mat-option>
+            <mat-option value="threeStar">3 stars rating</mat-option>
+            <mat-option value="twoStar">2 stars rating</mat-option>
+            <mat-option value="oneStar">1 star rating</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Your Name</mat-label>
+          <input matInput placeholder="Mark Twain" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Email Address</mat-label>
+          <input matInput placeholder="user@example.com" />
+        </mat-form-field>
+      </div>
+      <div class="review-textbox">
+        <mat-form-field class="review-textarea" appearance="fill">
+          <mat-label>Your Review</mat-label>
+          <textarea matInput placeholder="Write your review here"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="review-submit">
+        <button mat-flat-button color="primary">Post Your Review</button>
+      </div>
+    </div>
+  </form>
+</div>

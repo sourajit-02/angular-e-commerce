@@ -1,0 +1,76 @@
+<div class="card-wrapper">
+  <mat-card class="card">
+    <h2>{{ loginBox.mainHeading }}</h2>
+    <mat-divider></mat-divider>
+    <div class="form-container">
+      <form
+        [formGroup]="loginForm"
+        #form="ngForm"
+        (ngSubmit)="onLogin()"
+        class="form"
+      >
+        <mat-label>{{ loginBox.emailLabel }}</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            type="email"
+            matInput
+            placeholder="Email"
+            formControlName="email"
+          />
+          <mat-error
+            *ngIf="
+              loginForm.get('email').hasError('required') && form.submitted
+            "
+          >
+            {{ getError("email-required") }}
+          </mat-error>
+          <mat-error
+            *ngIf="loginForm.get('email').hasError('email') && form.submitted"
+          >
+            {{ getError("email-invalid") }}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-label>{{ loginBox.passLabel }}</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            type="password"
+            matInput
+            placeholder="Password"
+            formControlName="password"
+          />
+          <mat-error
+            *ngIf="
+              loginForm.get('password').hasError('required') && form.submitted
+            "
+          >
+            {{ getError("pass-required") }}
+          </mat-error>
+          <mat-error
+            *ngIf="
+              loginForm.get('password').hasError('minlength') && form.submitted
+            "
+          >
+            {{ getError("pass-minlength") }}
+          </mat-error>
+        </mat-form-field>
+
+        <a
+          class="forgot-pass"
+          rel="nofollow"
+          href="#"
+          onclick="showRecoverPasswordForm();return false;"
+          >{{ loginBox.forgrotPass }}</a
+        >
+        <div class="form-element login-button-wrapper">
+          <mat-checkbox class="checkbox" [color]="loginBox.color"
+            >Remember me</mat-checkbox
+          >
+          <button mat-flat-button type="submit" class="button button-m">
+            {{ loginBox.buttonName }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </mat-card>
+</div>

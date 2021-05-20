@@ -1,0 +1,76 @@
+@import '~bootstrap/scss/bootstrap';
+
+.checkout-wrapper {
+  background: #fafafa;
+}
+
+.block-header-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.block-header-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 36px 0 40px;
+  line-height: 1.2;
+}
+
+.order-card {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 2rem;
+  border-radius: 0;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 9%);
+  border: none;
+  margin: 0;
+}
+
+.btn {
+  border: none;
+  border-radius: 2px;
+  fill: currentColor;
+  font-weight: 500;
+}
+
+.btn:not(.btn-icon) {
+  font-size: 16px;
+  line-height: 19px;
+  padding: calc(17px / 2) 16px;
+}
+
+.btn-xl:not(.btn-icon) {
+  font-size: 20px;
+  line-height: 26px;
+  padding: calc(34px / 2) 40px;
+}
+
+.btn-primary,
+.btn-primary.disabled,
+.btn-primary:disabled {
+  border-color: #e52727;
+  background: #e52727;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  border-color: #333;
+  background: #333;
+  color: #fff
+}
+
+.block-space-end {
+  display: block;
+  height: 80px;
+}
+
+@media (min-width: 1200px) {
+  .container-max-width {
+    max-width: 1140px;
+  }
+
+  .block-header-title {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,17 @@
+<div class="vendor-wrapper">
+  <div class="header-wrapper">
+    <h5>Vendor(Supplier)</h5>
+    <button mat-flat-button (click)="openDialog('Add', {})" class="button">
+      Add Vendor
+    </button>
+  </div>
+  <app-table
+    [tableType]="tableType"
+    [pagination]="true"
+    [displayedColumns]="displayedColumns"
+    [tableData]="dataSource"
+    [paginationData]="paginationData"
+    (action)="emitRowAction($event)"
+  >
+  </app-table>
+</div>

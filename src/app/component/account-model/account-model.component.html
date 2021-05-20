@@ -1,0 +1,16 @@
+<div class="header-wrapicon">
+  <button (click)="op.toggle($event)" routerLink="{{ accountLink }}">
+    <img src="{{ headerIcon1 }} " alt="icon-header01" class="icon-header" />
+  </button>
+</div>
+<p-overlayPanel
+  id="account"
+  #op
+  [dismissable]="true"
+  [showCloseIcon]="!(isWeb$ | async) ? true : false"
+  [showTransitionOptions]="'300ms'"
+  [hideTransitionOptions]="'300ms'"
+  [style]="{ width: '100vw' }"
+>
+  <ng-template pTemplate></ng-template>
+</p-overlayPanel>

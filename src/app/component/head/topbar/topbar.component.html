@@ -1,0 +1,35 @@
+<mat-toolbar id="top-bar" (scroll)="onWindowScroll()">
+  <div class="social">
+    <a href="https://facebook.com/shopify">
+      <fa-icon [icon]="faFacebookF"></fa-icon>
+    </a>
+    <a href="https://twitter.com/shopify">
+      <fa-icon [icon]="faTwitter"></fa-icon>
+    </a>
+    <a href="https://pinterest.com/shopify"
+      ><fa-icon [icon]="faPinterestSquare"></fa-icon
+    ></a>
+    <a href="https://plus.google.com/shopify"
+      ><fa-icon [icon]="faGooglePlusG"></fa-icon
+    ></a>
+    <a href="https://instagram.com/shopify"
+      ><fa-icon [icon]="faInstagram"></fa-icon
+    ></a>
+  </div>
+  <span class="text1">Free shipping for standard order over $100</span>
+
+  <div class="topbar-end">
+    <span class="text1 email">fashe@example.com</span>
+
+    <mat-form-field id="currency-select" class="form-underline">
+      <mat-select [(value)]="selectedCurrency" name="currency">
+        <mat-option
+          *ngFor="let currency of currencyList"
+          [value]="currency.value"
+        >
+          {{ currency.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</mat-toolbar>

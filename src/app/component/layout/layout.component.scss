@@ -1,0 +1,10 @@
+.block-header {
+  height: 65px;
+}
+
+@media (min-width: 992px) {
+  .block-header {
+    height: 110px;
+  }
+}
+

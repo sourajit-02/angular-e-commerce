@@ -1,0 +1,30 @@
+@import '~bootstrap/scss/bootstrap';
+
+* {
+  font-family: "Roboto", "sans-serif";
+  color: #262626;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  border-radius: 2px;
+  background-clip: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, all .15s ease-in-out, opacity .15s ease-in-out;
+  color: #262626;
+  background-color: #ebebeb;
+  border: 1px solid #ebebeb;
+  height: 36px;
+  padding: calc(15px / 2) 10px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+label {
+  margin-bottom: .25rem;
+  font-size: 15px;
+}

@@ -1,0 +1,14 @@
+<div class="city-wrapper">
+  <div class="header-wrapper">
+    <h5>City</h5>
+    <button mat-flat-button (click)="openDialog('Add', {})" class="button">
+      Add City
+    </button>
+  </div>
+  <app-prime-table
+    [dataSource]="dataSource"
+    [displayedColumns]="displayedColumns"
+    [displayItem]="Item"
+  >
+  </app-prime-table>
+</div>

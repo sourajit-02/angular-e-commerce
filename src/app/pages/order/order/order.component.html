@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="order-table">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z1">
+      <ng-container matColumnDef="number">
+        <th mat-header-cell *matHeaderCellDef>NUMBER</th>
+        <td mat-cell *matCellDef="let element">
+          <a routerLink="order-detail">
+            {{ element.number }}
+          </a>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef>DATE</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.date | date: "MMM d, y" }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef>STATUS</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.status | titlecase }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="total">
+        <th mat-header-cell *matHeaderCellDef>TOTAL</th>
+        <td mat-cell *matCellDef="let element">{{ element.total }}</td>
+      </ng-container>
+
+      <th mat-header-row *matHeaderRowDef="title" class="mat-header-row">
+        Order History
+      </th>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 20]"
+      showFirstLastButtons
+    ></mat-paginator>
+  </div>
+</div>

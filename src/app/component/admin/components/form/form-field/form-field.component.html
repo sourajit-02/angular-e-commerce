@@ -1,0 +1,40 @@
+<ng-container *ngIf="fieldData.fieldType === 'input'">
+  <app-input
+    [formFieldData]="fieldData"
+    [submitted]="submitted"
+    [group]="myformGroup"
+  >
+  </app-input>
+</ng-container>
+<ng-container *ngIf="fieldData.fieldType === 'select'">
+  <app-select
+    [formFieldData]="fieldData"
+    [submitted]="submitted"
+    [group]="myformGroup"
+  >
+  </app-select>
+</ng-container>
+<ng-container *ngIf="fieldData.fieldType === 'checkbox'">
+  <app-checkbox
+    [formFieldData]="fieldData"
+    [submitted]="submitted"
+    [group]="myformGroup"
+  >
+  </app-checkbox>
+</ng-container>
+<ng-container *ngIf="fieldData.fieldType === 'radio'">
+  <app-radio
+    [formFieldData]="fieldData"
+    [submitted]="submitted"
+    [group]="myformGroup"
+  >
+  </app-radio>
+</ng-container>
+<ng-container *ngIf="fieldData.fieldType === 'textarea'">
+  <app-textarea
+    [formFieldData]="fieldData"
+    [submitted]="submitted"
+    [group]="myformGroup"
+  >
+  </app-textarea>
+</ng-container>

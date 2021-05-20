@@ -1,0 +1,141 @@
+<div class="view-cart-wrapper">
+  <h1>{{ title }}</h1>
+  <div class="cart-content-wrapper">
+    <div class="order-table">
+      <mat-table #table [dataSource]="dataSource">
+        <ng-container matColumnDef="product_name">
+          <mat-header-cell *matHeaderCellDef> PRODUCT </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <a routerLink="javascript:void(0);">
+              {{ element.product_name }}
+            </a>
+          </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="product_description">
+          <mat-header-cell class="show-web" *matHeaderCellDef>
+            DESCRIPTION
+          </mat-header-cell>
+          <mat-cell class="show-web" *matCellDef="let element">
+            {{ element.product_description }}
+          </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="product_price">
+          <mat-header-cell class="cell-align" *matHeaderCellDef
+            >
+            PRICE
+            </mat-header-cell
+          >
+          <mat-cell class="cell-align" *matCellDef="let element">
+            {{ element.product_price | currency }}
+          </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="product_quantity">
+          <mat-header-cell class="cell-align" *matHeaderCellDef
+            >
+            QUANTITY
+            </mat-header-cell
+          >
+          <mat-cell class="cell-align" *matCellDef="let element">
+            <div class="quantity-wrapper">
+              <div class="quantity flex-center text-color">
+                <button
+                  class="quantity-change"
+                  mat-flat-button
+                  (click)="decrease(element)"
+                >
+                  -
+                </button>
+                <span *ngIf="element">
+                  {{ element.product_quantity }}
+                </span>
+                <button
+                  class="quantity-change"
+                  mat-flat-button
+                  (click)="increase(element)"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="total">
+          <mat-header-cell class="column-total cell-align" *matHeaderCellDef>
+            TOTAL
+          </mat-header-cell>
+          <mat-cell class="column-total cell-align" *matCellDef="let element">
+            {{ element.total | currency }}
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="remove">
+          <mat-header-cell class="shrink" *matHeaderCellDef></mat-header-cell>
+          <mat-cell class="column-remove shrink" *matCellDef="let element">
+            <button type="button" class="remove-button">
+              <app-icon icon="cross-12">
+                <svg width="12" height="12">
+                  <path
+                    d="M10.8,10.8L10.8,10.8c-0.4,0.4-1,0.4-1.4,0L6,7.4l-3.4,3.4c-0.4,0.4-1,0.4-1.4,0l0,0c-0.4-0.4-0.4-1,0-1.4L4.6,6L1.2,2.6
+            c-0.4-0.4-0.4-1,0-1.4l0,0c0.4-0.4,1-0.4,1.4,0L6,4.6l3.4-3.4c0.4-0.4,1-0.4,1.4,0l0,0c0.4,0.4,0.4,1,0,1.4L7.4,6l3.4,3.4
+            C11.2,9.8,11.2,10.4,10.8,10.8z"
+                  ></path>
+                </svg>
+              </app-icon>
+            </button>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      </mat-table>
+    </div>
+    <div class="total-card-wrapper">
+      <mat-card class="total-card">
+        <mat-card class="header">
+          <mat-card-title>Cart Totals</mat-card-title>
+        </mat-card>
+        <div class="total-content-wrapper">
+          <div class="button-wrapper">
+            <mat-card class="card2">
+              <mat-card-subtitle class="total-title"> Total</mat-card-subtitle>
+              <mat-card-subtitle> {{ cartTotal | currency }}</mat-card-subtitle>
+            </mat-card>
+            <button class="red-button checkout" routerLink="/website/cart">
+              Proceed to Checkout
+            </button>
+          </div>
+          <div class="total-content">
+            <mat-card class="card">
+              <mat-card-subtitle class="total-title">
+                Subtotal</mat-card-subtitle
+              >
+              <mat-card-subtitle>
+                {{ cartTotal | currency }}
+              </mat-card-subtitle>
+            </mat-card>
+            <mat-card class="card">
+              <mat-card-subtitle class="total-title">
+                Shipping</mat-card-subtitle
+              >
+              <mat-card-subtitle>
+                {{ shipping | currency }}
+              </mat-card-subtitle>
+            </mat-card>
+            <mat-card class="shipping-card">
+              <mat-card-subtitle class="link">
+                <a routerLink="javascript:void(0);">Calculate Shipping</a>
+              </mat-card-subtitle>
+            </mat-card>
+            <mat-card class="card">
+              <mat-card-subtitle class="total-title"> Tax</mat-card-subtitle>
+              <mat-card-subtitle>{{ tax | currency }}</mat-card-subtitle>
+            </mat-card>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

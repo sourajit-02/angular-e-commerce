@@ -1,0 +1,40 @@
+<mat-grid-list
+  class="products"
+  [cols]="colBreakpoint"
+  [rowHeight]="rowBreakpoint"
+  (window:resize)="onResize($event)"
+>
+  <mat-grid-tile [rowspan]="leftbarRowspan" colspan="1">
+    <app-leftbar
+      #leftbar
+      [productList]="productList"
+      class="leftbar"
+    ></app-leftbar>
+  </mat-grid-tile>
+
+  <div *ngIf="leftbar.filterFlag === true">
+    <mat-grid-tile
+      *ngFor="let product of leftbar.filteredList"
+      rowspan="2"
+      colspan="1"
+    >
+      <mat-card class="product-card">
+        <app-product-item
+          [productItem]="product"
+          [authUser]="authUser"
+        ></app-product-item>
+      </mat-card>
+    </mat-grid-tile>
+  </div>
+
+  <div *ngIf="leftbar.filterFlag !== true">
+    <mat-grid-tile *ngFor="let product of productList" rowspan="2" colspan="1">
+      <mat-card class="product-card">
+        <app-product-item
+          [productItem]="product"
+          [authUser]="authUser"
+        ></app-product-item>
+      </mat-card>
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>

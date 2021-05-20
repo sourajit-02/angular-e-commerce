@@ -1,0 +1,162 @@
+<div class="edit-profile">
+  <div class="row">
+    <div class="card">
+      <mat-card class="card-header">
+        <h2>Edit Profile</h2>
+      </mat-card>
+      <mat-card class="card-body">
+        <div class="form-container">
+          <form [formGroup]="editUserForm" #form="ngForm" class="form">
+            <ng-container *ngFor="let data of formFields">
+              <ng-container *ngIf="data.hidden !== true">
+                <ng-container *ngIf="data.fieldType === 'input'">
+                  <mat-label>{{ data.label }}</mat-label>
+                  <mat-form-field appearance="outline">
+                    <input
+                      matInput
+                      [type]="data.type"
+                      [placeholder]="data.placeholder"
+                      [formControlName]="data.controller"
+                      [min]="data.min"
+                      [max]="data.max"
+                    />
+                    <mat-error
+                      *ngIf="
+                        editUserForm
+                          .get(data.controller)
+                          .hasError('required') && form.submitted
+                      "
+                    >
+                      {{ getError("required", data) }}
+                    </mat-error>
+                    <mat-error
+                      *ngIf="
+                        editUserForm.get(data.controller).hasError('email') &&
+                        form.submitted
+                      "
+                    >
+                      {{ getError("email", data) }}
+                    </mat-error>
+                    <mat-error
+                      *ngIf="
+                        editUserForm.get(data.controller).hasError('pattern') &&
+                        form.submitted
+                      "
+                    >
+                      {{ getError("pattern", data) }}
+                    </mat-error>
+                    <mat-error
+                      *ngIf="
+                        editUserForm
+                          .get(data.controller)
+                          .hasError('minlength') && form.submitted
+                      "
+                    >
+                      {{ getError("minlength", data) }}
+                    </mat-error>
+                    <mat-error
+                      *ngIf="
+                        editUserForm
+                          .get(data.controller)
+                          .hasError('maxlength') && form.submitted
+                      "
+                    >
+                      {{ getError("maxlength", data) }}
+                    </mat-error>
+                  </mat-form-field>
+                </ng-container>
+                <ng-container *ngIf="data.fieldType === 'textarea'">
+                  <mat-label> {{ data.label }} </mat-label>
+                  <mat-form-field appearance="outline">
+                    <textarea
+                      matInput
+                      [placeholder]="data.placeholder"
+                      [formControlName]="data.controller"
+                    >
+                    </textarea>
+                    <mat-error
+                      *ngIf="
+                        editUserForm
+                          .get(data.controller)
+                          .hasError('required') && form.submitted
+                      "
+                    >
+                      {{ getError("required", data) }}
+                    </mat-error>
+                    <mat-error
+                      *ngIf="
+                        editUserForm.get(data.controller).hasError('email') &&
+                        form.submitted
+                      "
+                    >
+                      {{ getError("email", data) }}
+                    </mat-error>
+                    <mat-error
+                      *ngIf="
+                        editUserForm.get(data.controller).hasError('pattern') &&
+                        form.submitted
+                      "
+                    >
+                      {{ getError("pattern", data) }}
+                    </mat-error>
+                    <mat-error
+                      *ngIf="
+                        editUserForm
+                          .get(data.controller)
+                          .hasError('minlength') && form.submitted
+                      "
+                    >
+                      {{ getError("minlength", data) }}
+                    </mat-error>
+                    <mat-error
+                      *ngIf="
+                        editUserForm
+                          .get(data.controller)
+                          .hasError('maxlength') && form.submitted
+                      "
+                    >
+                      {{ getError("maxlength", data) }}
+                    </mat-error>
+                  </mat-form-field>
+                </ng-container>
+                <ng-container *ngIf="data.fieldType === 'select'">
+                  <mat-label> {{ data.label }} </mat-label>
+                  <mat-form-field appearance="outline">
+                    <mat-select
+                      [(value)]="data.values[0].value"
+                      [formControlName]="data.controller"
+                    >
+                      <mat-option
+                        *ngFor="let value of data.values"
+                        [value]="value.value"
+                      >
+                        {{ value.name }}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error
+                      *ngIf="
+                        editUserForm
+                          .get(data.controller)
+                          .hasError('required') && form.submitted
+                      "
+                    >
+                      {{ getError("required", data) }}
+                    </mat-error>
+                  </mat-form-field>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+          </form>
+          <button
+            mat-flat-button
+            type="submit"
+            class="button button-m"
+            (click)="onSubmit(editUserForm)"
+          >
+            {{ editBox.button }}
+          </button>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

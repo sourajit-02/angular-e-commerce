@@ -1,0 +1,60 @@
+mat-card {
+  width: 33%;
+  margin: auto;
+}
+
+@media (min-width: 280px) {
+  mat-card {
+    width: 41%;
+  }
+}
+
+@media (min-width: 350px) {
+  mat-card {
+    width: 56%;
+  }
+}
+
+@media (min-width: 430px) {
+  mat-card {
+    width: 68%;
+  }
+}
+
+@media (min-width: 500px) {
+
+  mat-card {
+    width: 80%;
+  }
+}
+
+@media (min-width: 600px) {
+  mat-card {
+    width: 62%;
+  }
+}
+
+@media (min-width: 700px) {
+  mat-card {
+    width: 70%;
+  }
+}
+
+@media (min-width: 780px) {
+  mat-card {
+    width: 95%;
+  }
+}
+
+@media (min-width: 960px) {
+  mat-card {
+    width: 96%;
+  }
+}
+
+@media (min-width: 1200px) {
+  mat-card {
+    width: 100%;
+  }
+}
+

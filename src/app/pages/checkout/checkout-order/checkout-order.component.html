@@ -1,0 +1,74 @@
+<h3 class="card-title">Your Order</h3>
+<ng-container *ngIf="!cartItems || cartItems.length === 0">
+  <div id="empty-cart">Your cart is empty</div>
+</ng-container>
+<ng-container *ngIf="cartItems && cartItems.length !== 0">
+  <table class="checkout-totals">
+    <thead class="checkout-totals-header">
+      <tr>
+        <th>Product</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody class="checkout-totals-products">
+      <ng-container *ngFor="let cartItem of cartItems">
+        <tr>
+          <td>
+            {{ cartItem.product_name | titlecase }} ×
+            {{ cartItem.product_quantity }}
+          </td>
+          <td>{{ cartItem.product_price }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+    <tbody class="checkout-totals-subtotals">
+      <tr>
+        <th>Subtotal</th>
+        <td>{{ cartTotal | currency }}</td>
+      </tr>
+      <tr>
+        <th>Shipping</th>
+        <td>$25.00</td>
+      </tr>
+      <tr>
+        <th>Tax</th>
+        <td>$181.00</td>
+      </tr>
+      <!---->
+    </tbody>
+    <tfoot class="checkout-totals-footer">
+      <tr>
+        <th>Total</th>
+        <td>{{ cartTotal + 25 + 181 | currency }}</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <app-checkout-payment></app-checkout-payment>
+
+  <div class="checkout-agree form-group">
+    <div class="form-check">
+      <div class="form-check-input input-check">
+        <span class="input-check-body">
+          <input
+            type="checkbox"
+            class="input-check-input"
+            id="app-checkbox-id-3"
+          />
+          <span class="input-check-box"> </span>
+          <span class="input-check-icon">
+            <svg width="9px" height="7px">
+              <path
+                d="M9,1.395L3.46,7L0,3.5L1.383,2.095L3.46,4.2L7.617,0L9,1.395Z"
+              ></path>
+            </svg>
+          </span>
+        </span>
+      </div>
+      <label class="form-check-label" for="app-checkbox-id-3">
+        I have read and agree to the website
+        <a href="site/terms">terms and conditions</a> .
+      </label>
+    </div>
+  </div>
+</ng-container>

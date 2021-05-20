@@ -1,0 +1,14 @@
+<app-titlebar
+  class="title-img"
+  [style.background-image]="'url(' + titleImg + ')'"
+  [titleText]="titleText"
+  [subTitleText]="subTitleText"
+></app-titlebar>
+<app-product-list></app-product-list>
+<mat-paginator
+  class="paginator"
+  [length]="100"
+  [pageSize]="10"
+  [pageSizeOptions]="[5, 10, 25, 100]"
+>
+</mat-paginator>

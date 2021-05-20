@@ -1,0 +1,90 @@
+.title-img {
+  background-position: center;
+  display: block;
+  height: 239px;
+}
+
+.content-wrapper {
+  padding-bottom: 38px;
+  padding-top: 66px;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: auto;
+}
+
+.map {
+  padding: 0px 15px;
+  padding-bottom: 30px;
+  flex: 30%;
+  height: fit-content;
+}
+
+.form-wrapper {
+  padding: 0 30px 60px 30px;
+  flex: 70%;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #888888;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 25px;
+  color: #333333;
+  line-height: 1.2;
+  padding: 15px 0 16px 0;
+  margin: 0;
+}
+
+form {
+  display: inline;
+}
+
+input {
+  border: 1px solid #e6e6e6;
+  color: #555555;
+  line-height: 1.8;
+  padding-left: 22px;
+  border-radius: 2px;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  display: block;
+  line-height: 1.8;
+  width: 100%;
+  min-height: 120px;
+  margin-bottom: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+  resize: vertical;
+  padding-left: 22px;
+
+}
+
+button {
+  background-color: #111111;
+  font-size: 16px;
+  color: white;
+  border-radius: 23px;
+  width: 160px;
+  height: 46px;
+  border: none;
+  outline: none !important;
+}
+
+@media (min-width: 780px) {
+  .content {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+

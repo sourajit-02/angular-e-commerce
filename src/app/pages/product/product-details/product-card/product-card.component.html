@@ -1,0 +1,44 @@
+<mat-card class="product-card">
+  <h1 class="product-name">{{ productDetails.product_name }}</h1>
+  <div class="review">
+    <div class="star">
+      <mat-icon class="filled-star-icon" *ngFor="let i of [1, 2, 3, 4]"
+        >star</mat-icon
+      >
+      <mat-icon>star_outline</mat-icon>
+    </div>
+    <span>3 reviews</span>
+  </div>
+  <p class="description">
+    Many philosophical debates that began in ancient times are still debated
+    today. In one general sense, philosophy is associated with wisdom,
+    intellectual culture and a search for knowledge.
+  </p>
+
+  <mat-divider></mat-divider>
+
+  <div class="image-slider">
+    <ng-image-slider
+      (window:resize)="onResize($event)"
+      [images]="imageObject"
+      [imageSize]="{ width: imageWidth, height: imageHeight }"
+      #nav
+    >
+    </ng-image-slider>
+  </div>
+  <!-- <div class="carousel-wrapper">
+    <div class="carousel">
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+          <img src="{{ productDetails.imgUrl }}" alt="Product Image" />
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="{{ productDetails.imgUrl }}" alt="Product Image" />
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="{{ productDetails.imgUrl }}" alt="Product Image" />
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </div> -->
+</mat-card>

@@ -1,0 +1,27 @@
+.reports {
+  display: flex;
+  flex-direction: column;
+  padding: .5em;
+}
+
+mat-card {
+  border-radius: 22px;
+  min-width: 250px;
+  margin: .5em;
+}
+
+mat-card-title {
+  font-size: 1.125em;
+}
+
+
+@media (min-width: 990px) {
+  .reports {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  mat-card {
+    width: 28vw;
+  }
+}

@@ -1,0 +1,155 @@
+@import '~bootstrap/scss/bootstrap';
+
+* {
+  font-family: "Roboto", "sans-serif";
+  color: #262626;
+}
+
+.checkout-payment-methods {
+  margin-bottom: 20px;
+}
+
+.payment-methods-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.payment-methods-item {
+  border-radius: 2px;
+  padding-bottom: 2px;
+  border: 1px solid #ebebeb;
+  transition: all .12s, border-color .12s;
+
+  &:hover {
+    background: #f5f5f5;
+    border-color: #e5e5e5;
+    cursor: pointer;
+  }
+}
+
+.payment-methods-item+.payment-methods-item {
+  margin-top: 6px;
+}
+
+.payment-methods-item.payment-methods-item-active {
+  background: #f5f5f5;
+  border-color: #e5e5e5;
+}
+
+.payment-methods-item-header {
+  display: flex;
+  align-items: center;
+  line-height: 18px;
+  margin: 0;
+  padding: 10px 12px 8px;
+  cursor: pointer;
+}
+
+.payment-methods-item-radio {
+  margin-right: 8px;
+}
+
+.input-radio-body {
+  display: block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.input-radio-input {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  cursor: inherit;
+
+  &:checked~.input-radio-circle {
+    background: #e52727;
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 8%);
+  }
+
+  &:checked~.input-radio-circle:after {
+    background: #fff;
+    visibility: visible;
+    transition-delay: 0s, 0s, 0s;
+    transform: scale(1);
+  }
+}
+
+.input-radio-circle {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 17%);
+  transition: all .2s, box-shadow .2s;
+}
+
+.input-radio-circle:after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background: #fff;
+  transform: scale(0);
+  transition: all .2s, transform .2s, visibility 0s .2s;
+  visibility: hidden;
+}
+
+.input-radio-input {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  cursor: inherit;
+
+  &:checked~.input-radio-circle {
+    background: #e52727;
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 8%);
+  }
+
+  &:checked~.input-radio-circle:after {
+    background: #fff;
+    visibility: visible;
+    transition-delay: 0s, 0s, 0s;
+    transform: scale(1);
+  }
+}
+
+.payment-methods-item-container {
+  display: none;
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  transition: height .3s, opacity .3s;
+}
+
+.payment-methods-item-active {
+
+  .payment-methods-item-container {
+    display: block;
+    opacity: 1;
+    height: auto;
+  }
+}
+
+.payment-methods-item-details {
+  font-size: 14px;
+  line-height: 22px;
+  padding: 0 12px 8px;
+}
+
+label {
+  margin-bottom: .25rem;
+  font-size: 15px;
+}

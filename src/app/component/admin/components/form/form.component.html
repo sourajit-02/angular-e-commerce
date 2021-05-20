@@ -1,0 +1,12 @@
+<ng-container *ngFor="let formGroup of parentForm.controls">
+  <form [formGroup]="formGroup" class="form">
+    <ng-container *ngFor="let data of fieldData">
+      <app-form-field
+        [fieldData]="data"
+        [myformGroup]="formGroup"
+        [submitted]="submitted"
+      >
+      </app-form-field>
+    </ng-container>
+  </form>
+</ng-container>

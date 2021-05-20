@@ -1,0 +1,50 @@
+<ng-container *ngIf="filter === true">
+  <mat-form-field>
+    <mat-label>Search</mat-label>
+    <input
+      matInput
+      (keyup)="applyFilter($event.target.value)"
+      placeholder="search"
+      #input
+    />
+  </mat-form-field>
+</ng-container>
+<div class="table-container">
+  <mat-table [dataSource]="dataSource" matSort #flexTable>
+    <ng-container
+      *ngFor="let column of objectKeys(displayedColumns)"
+      [matColumnDef]="column"
+    >
+      <mat-header-cell *matHeaderCellDef mat-sort-header>
+        {{ displayedColumns[column] }}
+      </mat-header-cell>
+
+      <mat-cell *matCellDef="let row">
+        <ng-container *ngIf="row">
+          <div [innerHtml]="row[column]"></div>
+        </ng-container>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="objectKeys(displayedColumns)">
+    </mat-header-row>
+    <mat-row *matRowDef="let row; columns: objectKeys(displayedColumns)">
+    </mat-row>
+
+    <!-- Row shown when there is no matching data. -->
+    <mat-row *matNoDataRow>
+      <mat-cell colspan="4" *ngIf="input">
+        No data matching the filter "{{ input.value }}"
+      </mat-cell>
+    </mat-row>
+  </mat-table>
+  <ng-container *ngIf="pagination === true">
+    <mat-paginator
+      [length]="paginationData['length']"
+      [pageSize]="paginationData['pageSize']"
+      [pageSizeOptions]="paginationData['pageSizeOptions']"
+      showFirstLastButtons
+    >
+    </mat-paginator>
+  </ng-container>
+</div>

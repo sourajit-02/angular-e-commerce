@@ -1,0 +1,186 @@
+.container {
+  display:flex ;
+  position:relative;
+  height: 1000px;
+  background: #fafafa;
+}
+
+.order-detail {
+  padding-top :15%;
+  width: 100%;
+  height: 100%;
+  margin-left: 20px;
+  margin-right:50px ;
+  text-align: left;
+}
+
+.side-nav {
+  top :19%;
+  position: relative;
+  flex:30%;
+  padding: 0 8px;
+  margin-left:70px ;
+  border: none;
+}
+
+.side-nav a {
+  text-decoration: none;
+  color: #6c757d;
+  font-weight: 400;
+  font-size: 15px;
+  font-family: Roboto,"sans-serif";
+}
+
+.side-nav th {
+  padding: 1.375rem 1.5rem;
+  font-size: 20px;
+  color: #262626;
+  font-family: Roboto,"sans-serif";
+  font-weight:500;
+  margin-bottom: 0;
+  border: none;
+  
+}
+.options {
+  border: none;
+}
+
+table {
+  width:100%;
+  padding: 12px,20px;
+  font-size: 15px;
+  text-align: left;
+  text-indent: initial;
+  border-spacing: 2px;
+}
+
+.mat-footer-row {
+  padding-top: 40px;
+  padding-bottom: 133%;
+  padding-left: 22px;
+  line-height: 20px;
+  color: #6c757d;
+  font-family: Roboto,"sans-serif";
+  font-weight: 400;
+  border-top: 1px solid #ebebeb;
+}
+
+.matCard {
+  box-shadow: none;
+  border-bottom: 1px solid #ebebeb ;
+  padding-left: 5px;
+}
+
+.mat-card-title {
+  padding-right: 3.5rem;
+  float: left;
+  font-family: Roboto,"sans-serif";
+  font-weight: 500;
+  border-bottom: 2px solid #e5e5e5;
+  padding-bottom: 4px;
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  color: black;
+}
+
+
+.matCard .mat-card-subtitle {
+  color: #6c757d;
+  font-size: 14px;
+  clear: both;
+  padding-top: 5px;
+  font-weight: 400;
+}
+
+button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 12px;
+  padding: calc(9px / 2) 9px;
+  color: #333;
+  border: none;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+table {
+  border-spacing: 2px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+
+.title {
+  border-bottom: 1px solid #ebebeb;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 10px 12px;
+  padding-left: 25px;
+  color: #262626;
+  font-family: Roboto,"sans-serif";
+  font-weight: bold;
+}
+
+.mat-cell {
+   border: none;
+   color: #262626;
+   font-family: Roboto,"sans-serif";
+   font-size: 14px;
+   font-weight: 400;
+   padding-left: 25px;
+   padding-right: 140px;
+}
+
+.card {
+display: flex;
+justify-content: space-between;
+padding-left: 25px;
+padding-right: 100px;
+padding-bottom: 0;
+border-radius: 0;
+}
+
+.mat-card-subtitle {
+color: black;
+font-family: Roboto,"sans-serif";
+font-size: 15px;
+font-weight: 500;
+line-height: 0.75;
+padding-right: 1px;
+}
+
+.totalCard {
+display: flex;
+justify-content: space-between;
+padding-left: 25px;
+padding-right: 100px;
+border-bottom: none;
+padding-bottom: 0;
+border-radius: 0;
+border-bottom: 1px solid #ebebeb;
+border-top: 1px solid #ebebeb;
+}
+
+.sub-container {
+display:flex;
+text-align: left;
+color:black;
+font-weight: 500;
+font-size: 15px;
+font-family: Roboto,"sans-serif";
+}
+
+.billingAdd {
+flex: 30%;
+padding-right: 20px;
+}
+
+.shippingAdd {
+flex:30%;
+} 
+
+.sub-container button {
+top: 8px;
+}
+
+

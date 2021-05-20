@@ -1,0 +1,60 @@
+#top-bar {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  background-color: #f5f5f5;
+  padding: 0px;
+  font-size: 18px;
+  color: #888888;
+  font-weight: 400;
+
+  .social {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+
+    fa-icon {
+      color: #888888;
+      font-size: 18px;
+      padding: 9.75px;
+    }
+  }
+
+  .text1 {
+    font-size: 13px;
+    color: #888888;
+    line-height: 1.7;
+  }
+
+  .topbar-end {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-right: 38px;
+  }
+
+  .email {
+    position: relative;
+    bottom: .3em;
+  }
+
+  #currency-select {
+    bottom: 0.05em;
+    width: 3.8em;
+    font-size: 13px;
+    margin-left: 25.5px;
+  }
+}
+
+.hide-topbar {
+  display: none;
+}

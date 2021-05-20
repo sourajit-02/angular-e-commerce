@@ -1,0 +1,29 @@
+export interface IProduct {
+  product_id?: number;
+  product_title: string;
+  product_name: string;
+  product_description: string;
+  product_quantity: number;
+  product_price: number;
+  discount_price: number;
+  config: {};
+  sku: string;
+  tax: number;
+  hsn_code: string;
+  meta_title: string;
+  meta_keyword: string;
+  meta_description: string;
+  custom_tags: string;
+  key_feature_1: string;
+  key_feature_2: string;
+  key_feature_3: string;
+  shipping_info_length: number;
+  shipping_info_width: number;
+  shipping_info_height: number;
+  shipping_info_weight: number;
+  return_days: number;
+  is_active?: any;
+  actions?: any[];
+  created_by?: string;
+  updated_by?: string;
+}

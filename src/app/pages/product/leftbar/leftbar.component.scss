@@ -1,0 +1,35 @@
+.leftbar-content {
+  color: #666666;
+  display: grid;
+  grid-gap: 8%;
+
+  .leftbar-items {
+    margin: 2% 4%;
+  }
+}
+
+
+.leftbar-form {
+  min-width: 100px;
+  max-width: 200px;
+  width: 100%;
+}
+
+.leftbar-form-search {
+  width: 100%;
+}
+
+h4 {
+  color: #333333;
+  margin: 1% 0;
+}
+
+.leftbar-items-links {
+  text-decoration: none;
+  color: #888888;
+}
+
+.leftbar-items-lists {
+  padding: 0;
+  list-style: none;
+}

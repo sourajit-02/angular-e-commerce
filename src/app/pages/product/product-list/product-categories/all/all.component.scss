@@ -1,0 +1,22 @@
+.title-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: block;
+  height: 239px;
+}
+
+.paginator {
+  position: relative;
+  bottom: 20px;
+  height: 85px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+}
+
+@media (min-width: 960px) {
+  .paginator {
+    bottom: 65px;
+  }
+}

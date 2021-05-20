@@ -1,0 +1,28 @@
+<div *ngIf="formFieldData.hidden !== true" class="admin-form-field">
+  <mat-form-field appearance="outline">
+    <mat-label> {{ formFieldData.label }} </mat-label>
+    <input
+      [type]="formFieldData.type"
+      matInput
+      [placeholder]="formFieldData.placeholder"
+      [formControl]="control"
+      [min]="formFieldData.min"
+      [max]="formFieldData.max"
+    />
+    <mat-error *ngIf="control.hasError('required') && submitted === true">
+      {{ getError("required") }}
+    </mat-error>
+    <mat-error *ngIf="control.hasError('email') && submitted === true">
+      {{ getError("email") }}
+    </mat-error>
+    <mat-error *ngIf="control.hasError('pattern') && submitted === true">
+      {{ getError("pattern") }}
+    </mat-error>
+    <mat-error *ngIf="control.hasError('minlength') && submitted === true">
+      {{ getError("minlength") }}
+    </mat-error>
+    <mat-error *ngIf="control.hasError('maxlength') && submitted === true">
+      {{ getError("maxlength") }}
+    </mat-error>
+  </mat-form-field>
+</div>

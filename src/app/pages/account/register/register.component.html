@@ -1,0 +1,184 @@
+<div class="card-wrapper">
+  <mat-card class="card">
+    <h2>Register</h2>
+    <mat-divider></mat-divider>
+    <div class="form-container">
+      <form
+        [formGroup]="registerForm"
+        #form="ngForm"
+        (ngSubmit)="onRegister()"
+        class="form"
+      >
+        <ng-container *ngFor="let data of fieldData">
+          <ng-container *ngIf="data.hidden !== true">
+            <ng-container *ngIf="data.controller === 'confirm_password'">
+              <mat-label>{{ data.label }}</mat-label>
+              <mat-form-field appearance="outline">
+                <input
+                  matInput
+                  [type]="data.type"
+                  [placeholder]="data.placeholder"
+                  [formControlName]="data.controller"
+                />
+                <mat-error
+                  *ngIf="
+                    registerForm.get(data.controller).hasError('notmatched') &&
+                    form.submitted
+                  "
+                >
+                  {{ getError("notmatched") }}
+                </mat-error>
+              </mat-form-field>
+            </ng-container>
+            <ng-container *ngIf="data.controller !== 'confirm_password'">
+              <ng-container *ngIf="data.fieldType === 'input'">
+                <mat-label>{{ data.label }}</mat-label>
+                <mat-form-field appearance="outline">
+                  <input
+                    matInput
+                    [type]="data.type"
+                    [placeholder]="data.placeholder"
+                    [formControlName]="data.controller"
+                    [min]="data.min"
+                    [max]="data.max"
+                  />
+                  <mat-error
+                    *ngIf="
+                      registerForm.get(data.controller).hasError('required') &&
+                      form.submitted
+                    "
+                  >
+                    {{ getError("required", data) }}
+                  </mat-error>
+                  <mat-error
+                    *ngIf="
+                      registerForm.get(data.controller).hasError('email') &&
+                      form.submitted
+                    "
+                  >
+                    {{ getError("email", data) }}
+                  </mat-error>
+                  <mat-error
+                    *ngIf="
+                      registerForm.get(data.controller).hasError('pattern') &&
+                      form.submitted
+                    "
+                  >
+                    {{ getError("pattern", data) }}
+                  </mat-error>
+                  <mat-error
+                    *ngIf="
+                      registerForm.get(data.controller).hasError('minlength') &&
+                      form.submitted
+                    "
+                  >
+                    {{ getError("minlength", data) }}
+                  </mat-error>
+                  <mat-error
+                    *ngIf="
+                      registerForm.get(data.controller).hasError('maxlength') &&
+                      form.submitted
+                    "
+                  >
+                    {{ getError("maxlength", data) }}
+                  </mat-error>
+                </mat-form-field>
+              </ng-container>
+              <ng-container *ngIf="data.fieldType === 'textarea'">
+                <mat-label> {{ data.label }} </mat-label>
+                <mat-form-field appearance="outline">
+                  <textarea
+                    matInput
+                    [placeholder]="data.placeholder"
+                    [formControlName]="data.controller"
+                  >
+                  </textarea>
+                  <mat-error
+                    *ngIf="
+                      registerForm.get(data.controller).hasError('required') &&
+                      form.submitted
+                    "
+                  >
+                    {{ getError("required", data) }}
+                  </mat-error>
+                  <mat-error
+                    *ngIf="
+                      registerForm.get(data.controller).hasError('email') &&
+                      form.submitted
+                    "
+                  >
+                    {{ getError("email", data) }}
+                  </mat-error>
+                  <mat-error
+                    *ngIf="
+                      registerForm.get(data.controller).hasError('pattern') &&
+                      form.submitted
+                    "
+                  >
+                    {{ getError("pattern", data) }}
+                  </mat-error>
+                  <mat-error
+                    *ngIf="
+                      registerForm.get(data.controller).hasError('minlength') &&
+                      form.submitted
+                    "
+                  >
+                    {{ getError("minlength", data) }}
+                  </mat-error>
+                  <mat-error
+                    *ngIf="
+                      registerForm.get(data.controller).hasError('maxlength') &&
+                      form.submitted
+                    "
+                  >
+                    {{ getError("maxlength", data) }}
+                  </mat-error>
+                </mat-form-field>
+              </ng-container>
+              <ng-container *ngIf="data.fieldType === 'select'">
+                <mat-label> {{ data.label }} </mat-label>
+                <mat-form-field appearance="outline">
+                  <mat-select
+                    [(value)]="data.values[0].value"
+                    [formControlName]="data.controller"
+                  >
+                    <mat-option
+                      *ngFor="let value of data.values"
+                      [value]="value.value"
+                    >
+                      {{ value.name }}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error
+                    *ngIf="
+                      registerForm.get(data.controller).hasError('required') &&
+                      form.submitted
+                    "
+                  >
+                    {{ getError("required", data) }}
+                  </mat-error>
+                </mat-form-field>
+              </ng-container>
+            </ng-container>
+          </ng-container>
+        </ng-container>
+        <div class="form-element">
+          <button mat-flat-button type="submit" class="button button-m">
+            Register
+          </button>
+        </div>
+      </form>
+    </div>
+  </mat-card>
+  <div class="login-button-wrapper">
+    <span>Or</span>
+    <button
+      mat-flat-button
+      type="button"
+      class="button button-m"
+      routerLink="/website/account/login"
+    >
+      Sign in
+    </button>
+  </div>
+</div>

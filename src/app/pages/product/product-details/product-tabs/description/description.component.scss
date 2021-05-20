@@ -1,0 +1,42 @@
+.typography {
+  padding: .25em;
+  color: #262626;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 1.5em 0 .75em;
+}
+
+p {
+  font-size: 13px;
+  margin: 0 0 1.5em;
+  line-height: 1.5;
+}
+
+.typography>:last-child {
+  margin: 0;
+}
+
+@media (min-width: 280px) {
+  .typography {
+    padding: .5em;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 350px) {}
+
+@media (min-width: 430px) {}
+
+@media (min-width: 500px) {}
+
+@media (min-width: 600px) {}
+
+@media (min-width: 780px) {}
+
+@media (min-width: 960px) {}

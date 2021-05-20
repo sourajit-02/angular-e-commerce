@@ -1,0 +1,124 @@
+<footer class="footer-wrapper">
+  <div class="footer">
+    <div class="box1">
+      <h4 class="title">GET IN TOUCH</h4>
+      <div>
+        <p class="text1 w-size27">
+          Any questions? Let us know in store at 8th floor, 379 Hudson St, New
+          York, NY 10018 or call us on (+1) 96 716 6879
+        </p>
+        <div class="social">
+          <a routerLink="https://facebook.com/shopify">
+            <fa-icon [icon]="faFacebookF"></fa-icon>
+          </a>
+          <a routerLink="https://twitter.com/shopify">
+            <fa-icon [icon]="faTwitter"></fa-icon>
+          </a>
+          <a routerLink="https://pinterest.com/shopify">
+            <fa-icon [icon]="faPinterestSquare"></fa-icon>
+          </a>
+          <a routerLink="https://plus.google.com/shopify">
+            <fa-icon [icon]="faGooglePlusG"></fa-icon>
+          </a>
+          <a routerLink="https://instagram.com/shopify">
+            <fa-icon [icon]="faInstagram"></fa-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="box2">
+      <h4 class="title">CATEGORIES</h4>
+      <ul>
+        <li class="p-b-9"><a routerLink="/" class="text1">Men</a></li>
+
+        <li class="p-b-9"><a routerLink="/" class="text1">Women</a></li>
+
+        <li class="p-b-9"><a routerLink="/" class="text1">Dresses</a></li>
+
+        <li class="p-b-9"><a routerLink="/" class="text1">Sunglasses</a></li>
+      </ul>
+    </div>
+    <div class="box2">
+      <h4 class="title">LINKS</h4>
+      <ul>
+        <li class="p-b-9"><a routerLink="/" class="text1">Search</a></li>
+
+        <li class="p-b-9">
+          <a routerLink="about" class="text1">About Us</a>
+        </li>
+
+        <li class="p-b-9">
+          <a routerLink="contact" class="text1">Contact Us</a>
+        </li>
+
+        <li class="p-b-9">
+          <a routerLink="/" class="text1">Returns</a>
+        </li>
+      </ul>
+    </div>
+    <div class="box2">
+      <h4 class="title">HELP</h4>
+      <ul>
+        <li class="p-b-9"><a routerLink="/" class="text1">Track Order</a></li>
+
+        <li class="p-b-9"><a routerLink="/" class="text1">Returns</a></li>
+
+        <li class="p-b-9"><a routerLink="/" class="text1">Shipping</a></li>
+
+        <li class="p-b-9"><a routerLink="/" class="text1">FAQs</a></li>
+      </ul>
+    </div>
+    <div class="box3">
+      <h4 class="title">NEWSLETTER</h4>
+
+      <div id="subscribe">
+        <form
+          method="post"
+          action="/contact#contact_form"
+          id="contact_form"
+          accept-charset="UTF-8"
+          class="contact-form"
+        >
+          <input type="hidden" name="form_type" value="customer" />
+          <input type="hidden" name="utf8" value="✓" />
+          <input type="hidden" name="contact[tags]" value="newsletter" />
+          <div class="input-wrapper">
+            <input
+              class="text1 input"
+              type="email"
+              value=""
+              placeholder="Email Address"
+              name="contact[email]"
+              id="subscribe_email"
+              required=""
+              aria-label="Email Address"
+              autocorrect="off"
+              autocapitalize="off"
+            />
+            <span class="underline"></span>
+          </div>
+          <div class="button-wrapper">
+            <!-- Button -->
+            <button class="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="footer-end">
+    <a class="payment"><fa-icon [icon]="faCcVisa"></fa-icon></a>
+    <a class="payment"><fa-icon [icon]="faCcMastercard"></fa-icon></a>
+    <a class="payment"><fa-icon [icon]="faCcAmex"></fa-icon></a>
+    <a class="payment"><fa-icon [icon]="faCcPaypal"></fa-icon></a>
+
+    <div class="copyright">
+      Copyright © 2018
+      <a
+        routerLink="https://themeforest.net/user/masstechnologist/portfolio?ref=masstechnologist"
+      >
+        MassTechnologist.com.
+      </a>
+      All rights reserved.
+    </div>
+  </div>
+</footer>

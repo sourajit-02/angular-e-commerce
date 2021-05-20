@@ -1,0 +1,64 @@
+<div class="new-address">
+  <div class="row">
+    <div class="subcontainer">
+      <mat-card class="new-add">
+        <div class="add-list-plus" routerLink="/account/new-address"></div>
+        <button
+          mat-raised-button
+          style="background: #f0f0f0"
+          routerLink="/account/new-address"
+        >
+          Add New
+        </button>
+      </mat-card>
+      <mat-card>
+        <div class="billingAdd">
+          <div class="add-box">
+            <button mat-raised-button color="warn" matBadgePosition="before">
+              Default
+            </button>
+            <h3>{{ name | titlecase }}</h3>
+            <mat-card-content>{{ address }}</mat-card-content>
+            Phone Number
+            <mat-card-content>{{ phone }}</mat-card-content>
+            Email Address
+            <mat-card-content>{{ email }}</mat-card-content>
+            <a class="EditAdd" rel="nofollow" href="#"> Edit Address </a>
+            <a
+              class="EditAdd"
+              rel="nofollow"
+              href="#"
+              style="margin-left: 2.5em"
+            >
+              Remove
+            </a>
+          </div>
+        </div>
+      </mat-card>
+      <mat-card>
+        <div class="billingAdd">
+          <div class="add-box">
+            <button mat-raised-button color="warn" matBadgePosition="before">
+              Default
+            </button>
+            <h3>{{ name | titlecase }}</h3>
+            <mat-card-content>{{ address }}</mat-card-content>
+            Phone Number
+            <mat-card-content>{{ phone }}</mat-card-content>
+            Email Address
+            <mat-card-content>{{ email }}</mat-card-content>
+            <a class="EditAdd" rel="nofollow" href="#"> Edit Address </a>
+            <a
+              class="EditAdd"
+              rel="nofollow"
+              href="#"
+              style="margin-left: 2.5em"
+            >
+              Remove
+            </a>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

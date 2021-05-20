@@ -1,0 +1,14 @@
+<div class="variant-data-wrapper">
+  <div class="header-wrapper">
+    <h5>Variant Data</h5>
+    <button mat-flat-button (click)="openDialog('Add', {})" class="button">
+      Add Variant Data
+    </button>
+  </div>
+  <app-prime-table
+    [dataSource]="dataSource"
+    [displayedColumns]="displayedColumns"
+    (action)="emitRowAction($event)"
+  >
+  </app-prime-table>
+</div>

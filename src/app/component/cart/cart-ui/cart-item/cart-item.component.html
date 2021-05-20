@@ -1,0 +1,42 @@
+<div *ngIf="cartItem.product_quantity > 0" class="dropcart-item">
+  <div class="drpocart-item-image">
+    <a class="image-wrapper"></a>
+    <img
+      class="image"
+      src="../../../../assets/item/item-08.jpg"
+      alt="cart-item-image"
+    />
+  </div>
+  <div class="dropcart-item-info">
+    <div class="dropcart-item-name">
+      <a>
+        {{ cartItem.product_name | titlecase }}
+      </a>
+    </div>
+    <div class="dropcart-item-meta">
+      <div class="dropcart-item-quantity">
+        {{ cartItem.product_quantity }}
+      </div>
+      <div class="dropcart-item-price">
+        {{ cartItem.product_price | currency: "USD" }}
+      </div>
+    </div>
+  </div>
+  <button
+    type="button"
+    class="dropcart-item-remove"
+    (click)="deleteCartItem(cartItem)"
+  >
+    <app-icon icon="cross-10"
+      ><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+      <svg width="10" height="10">
+        <path
+          d="M8.8,8.8L8.8,8.8c-0.4,0.4-1,0.4-1.4,0L5,6.4L2.6,8.8c-0.4,0.4-1,0.4-1.4,0l0,0c-0.4-0.4-0.4-1,0-1.4L3.6,5L1.2,2.6
+      c-0.4-0.4-0.4-1,0-1.4l0,0c0.4-0.4,1-0.4,1.4,0L5,3.6l2.4-2.4c0.4-0.4,1-0.4,1.4,0l0,0c0.4,0.4,0.4,1,0,1.4L6.4,5l2.4,2.4
+      C9.2,7.8,9.2,8.4,8.8,8.8z"
+        ></path>
+      </svg>
+      <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+    </app-icon>
+  </button>
+</div>

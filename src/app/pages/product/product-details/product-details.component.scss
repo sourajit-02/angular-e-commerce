@@ -1,0 +1,39 @@
+// .container {
+//   margin: auto;
+//   padding: 0 15px;
+//   width: 100%;
+// }
+
+// @media (min-width: 576px) {
+//   .container {
+//     width: 1140px;
+//   }
+// }
+
+// @media (min-width: 768px) {
+//   .container {
+//     max-width: 960px;
+//   }
+// }
+
+// @media (min-width: 992px) {
+//   .container {
+//    max-width: 960px;
+//   }
+// }
+
+// @media (min-width: 1200px) {
+//   .container {
+//     width: 1140px;
+//   }
+// }
+
+.product-details {
+  margin-top: 1em;
+}
+
+app-product-card,
+app-product-info,
+app-product-tabs {
+  align-self: baseline;
+}
